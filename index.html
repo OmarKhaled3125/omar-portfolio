@@ -3,25 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Khaled - Backend Developer with AI Focus</title>
+    <title>Omar Khaled Mohamed Sobaih - Backend Developer with AI Focus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.6; }
-        header { background: #2c3e50; color: white; text-align: center; padding: 2rem; }
-        section { padding: 2rem; max-width: 1200px; margin: 0 auto; }
-        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-        .skill { background: #3498db; color: white; padding: 0.5rem 1rem; border-radius: 20px; }
-        .project { background: white; margin: 1rem 0; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .project h3 { color: #2c3e50; }
-        footer { background: #34495e; color: white; text-align: center; padding: 1rem; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6c757d;
+            --accent: #007bff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            background-color: var(--bg-secondary); 
+            color: var(--text-primary); 
+            line-height: 1.6; 
+            overflow-x: hidden;
+        }
+        header { 
+            background: var(--bg-primary); 
+            text-align: center; 
+            padding: 4rem 2rem; 
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        header h1 { 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            margin-bottom: 0.5rem; 
+            color: var(--text-primary);
+        }
+        header h2 { 
+            font-size: 1.5rem; 
+            font-weight: 400; 
+            color: var(--accent); 
+            margin-bottom: 1rem;
+        }
+        section { 
+            padding: 4rem 2rem; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        h2 { 
+            font-size: 2rem; 
+            font-weight: 600; 
+            text-align: center; 
+            margin-bottom: 3rem; 
+            color: var(--text-primary);
+        }
+        .skills { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 1rem; 
+            max-width: 800px; 
+            margin: 0 auto;
+        }
+        .skill { 
+            background: var(--accent); 
+            color: white; 
+            padding: 0.75rem 1.5rem; 
+            border-radius: 50px; 
+            font-size: 0.9rem; 
+            font-weight: 500; 
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        .skill:hover { 
+            transform: translateY(-2px); 
+            opacity: 0.9;
+        }
+        .projects-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 2rem; 
+            max-width: 1000px; 
+            margin: 0 auto;
+        }
+        .project { 
+            background: var(--bg-primary); 
+            padding: 2rem; 
+            border-radius: 12px; 
+            box-shadow: var(--shadow); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        .project:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .project h3 { 
+            font-size: 1.25rem; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            color: var(--text-primary);
+        }
+        .project p { 
+            font-size: 1rem; 
+            color: var(--text-secondary); 
+            margin-bottom: 1.5rem;
+        }
+        .project-links { 
+            display: flex; 
+            gap: 1rem; 
+        }
+        .project-links a { 
+            color: var(--accent); 
+            font-weight: 500; 
+            text-decoration: none; 
+            transition: color 0.2s ease;
+        }
+        .project-links a:hover { 
+            color: #0056b3;
+        }
+        #about { 
+            background: var(--bg-primary); 
+            text-align: center; 
+            border-radius: 12px; 
+            box-shadow: var(--shadow);
+            max-width: 800px; 
+            margin: 0 auto;
+        }
+        #about p { 
+            font-size: 1.1rem; 
+            max-width: 600px; 
+            margin: 0 auto 1rem;
+        }
+        footer { 
+            background: var(--text-primary); 
+            color: white; 
+            text-align: center; 
+            padding: 2rem; 
+            font-size: 0.9rem;
+        }
+        footer a { 
+            color: var(--accent); 
+            text-decoration: none;
+        }
+        footer a:hover { 
+            color: #80bdff;
+        }
+        @media (max-width: 768px) { 
+            header { padding: 3rem 1rem; } 
+            header h1 { font-size: 2rem; } 
+            section { padding: 3rem 1rem; } 
+            h2 { font-size: 1.75rem; } 
+            .skills { gap: 0.75rem; } 
+            .skill { padding: 0.5rem 1rem; font-size: 0.85rem; } 
+            .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; } 
+            .project { padding: 1.5rem; } 
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Omar Khaled Mohamed Sobaih</h1>
         <h2>Backend Developer with AI Focus</h2>
-        <p>Recent graduate in Computer Science, specializing in Python and Flask for building robust APIs with AI integration. Ready for freelance projects in backend development and intelligent systems.</p>
+        <p>Recent graduate specializing in Python/Flask APIs, SQL databases, and AI (TensorFlow, Transformers). Crafting scalable edtech and productivity solutions. Open for freelance: Custom APIs, chatbots, backend prototypes. Rates: $15-25/hour or $150-600/project.</p>
     </header>
     
     <section id="skills">
@@ -30,39 +169,54 @@
             <span class="skill">Python</span>
             <span class="skill">Flask</span>
             <span class="skill">REST APIs</span>
-            <span class="skill">SQL</span>
+            <span class="skill">SQL / MySQL</span>
             <span class="skill">TensorFlow</span>
             <span class="skill">Transformers</span>
+            <span class="skill">JWT Auth</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Git</span>
         </div>
     </section>
     
     <section id="projects">
         <h2>Featured Projects</h2>
-        <div class="project">
-            <h3>Graduation Project: AI-Powered Backend System with Flask</h3>
-            <p>A Flask-based API for AI data analysis using TensorFlow and Transformers, integrated with SQL databases. Ideal for text processing and predictive analytics in business applications.</p>
-            <a href="https://github.com/OmarKhaled3125/0158-Graduation-Project" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Task Manager</h3>
-            <p>A full-stack web app built with Flask for task management, featuring CRUD APIs and SQL support. Demonstrates efficient project tracking and backend scalability.</p>
-            <a href="https://github.com/OmarKhaled3125/Task-Manager" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project">
-            <h3>Chatbot Assistant</h3>
-            <p>An intelligent chatbot using Transformers for automated responses, integrated with Flask API. Perfect for customer support automation in e-commerce or services.</p>
-            <a href="https://github.com/OmarKhaled3125/Chatbot_Assistant" target="_blank">View on GitHub</a>
+        <div class="projects-grid">
+            <div class="project">
+                <h3>LinguaZone: AI-Powered Language Learning Platform</h3>
+                <p>Full-stack edtech app with Flask backend, MySQL, and AI (DeepSpeech for speech-to-text + BART for grammar correction). Structured lessons, quizzes, and real-time feedback. Capstone project (2025) showcasing AI for personalized education.</p>
+                <div class="project-links">
+                    <a href="https://github.com/OmarKhaled3125/0158-Graduation-Project" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Live Demo (Local Setup)</a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Task Manager: Secure CRUD App with PyQt5 Client</h3>
+                <p>Full-stack task organizer using Flask API, MySQL, JWT auth, and bcrypt. User registration, task CRUD (create/read/update/delete/mark complete), plus PyQt5 desktop GUI. Built for secure productivity backends.</p>
+                <div class="project-links">
+                    <a href="https://github.com/OmarKhaled3125/Task-Manager" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">API Docs (Local)</a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Chatbot Assistant: DialoGPT-Powered AI Chat</h3>
+                <p>Web-based conversational bot with Flask and Hugging Face Transformers (DialoGPT-medium). Multi-turn chats with session history; extensible for support or virtual assistants. Emphasizes efficient NLP deployment.</p>
+                <div class="project-links">
+                    <a href="https://github.com/OmarKhaled3125/Chatbot_Assistant" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Try Chat (Local)</a>
+                </div>
+            </div>
         </div>
     </section>
     
     <section id="about">
         <h2>About Me</h2>
-        <p>I deliver reliable, scalable solutions at competitive rates ($150-600 for small projects). Contact me to discuss your needs in API development or AI integration.</p>
+        <p>Recent graduate from Egyptian E-Learning University (Faculty of Computers & Information Technology). Focused on intelligent backends for startups and SMEs. Global availability for edtech, AI APIs, and secure systems. Let's build something impactful together.</p>
+        <p><strong>Services:</strong> Custom Flask APIs ($200+), AI Integrations (e.g., chatbots $300+), Full-Stack Prototypes ($500+).</p>
     </section>
     
     <footer>
-        <p>Contact: omar.khaled@example.com | LinkedIn: linkedin.com/in/omarkhaled3125 | Phone: 01278286325</p>
-        <p>&copy; 2023 Omar Khaled. All rights reserved.</p>
+        <p>Contact: omar.khaled@example.com | Phone: [Add your number] | <a href="https://linkedin.com/in/omarkhaled3125" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/OmarKhaled3125" target="_blank">GitHub</a> | &copy; 2023 Omar Khaled. All rights reserved.</p>
     </footer>
 </body>
 </html>
