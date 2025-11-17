@@ -9,14 +9,14 @@
         :root {
             --bg-primary: #ffffff;
             --bg-secondary: #f8f9fa;
-            --bg-gradient: linear-gradient(135deg, #87CEEB 0%, #AED6F1 100%);
+            --bg-gradient: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
             --text-primary: #1a1a1a;
             --text-secondary: #6c757d;
-            --accent: #87CEEB;
-            --accent-shade: #76C7F0;
+            --accent: #3B82F6;
+            --accent-shade: #60A5FA;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 5px 10px -3px rgba(0, 0, 0, 0.1);
-            --skill-gradient: radial-gradient(circle at 30% 30%, #87CEEB 0%, #76C7F0 70%);
+            --skill-gradient: radial-gradient(circle at 30% 30%, #3B82F6 0%, #60A5FA 70%);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -38,28 +38,30 @@
             position: relative;
             animation: fadeInUp 1s ease-out;
         }
-        header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.1); }
+        header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.03); } /* Subtle sheen, low interference */
         header h1 { 
             font-size: 2.75rem; 
             font-weight: 700; 
             margin-bottom: 0.75rem; 
-            color: white; 
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+            color: #ffffff;  /* Full white for crispness */
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);  /* Stronger shadow for legibility */
             letter-spacing: -0.025em;
         }
         header h2 { 
             font-size: 1.5rem; 
             font-weight: 500; 
-            color: rgba(255,255,255,0.95); 
+            color: #ffffff;  /* Full white */
             margin-bottom: 1.5rem; 
             letter-spacing: 0.025em;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.25);  /* Added shadow for depth */
         }
         header p { 
             font-size: 1.1rem; 
             max-width: 600px; 
             margin: 0 auto; 
-            color: rgba(255,255,255,0.9); 
+            color: #ffffff;  /* Full white for better contrast */
             font-weight: 300;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);  /* Subtle shadow on body text */
         }
         section { 
             padding: 5rem 2rem; 
@@ -85,17 +87,18 @@
         }
         .skill { 
             background: var(--skill-gradient); 
-            color: white; 
+            color: #ffffff;  /* Ensure full white text */
             padding: 0.875rem 1.75rem; 
             border-radius: 50px; 
             font-size: 0.95rem; 
             font-weight: 500; 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: var(--shadow);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);  /* Light shadow inside badges for readability */
         }
         .skill:hover { 
             transform: translateY(-4px) rotate(2deg); 
-            box-shadow: 0 8px 20px rgba(135, 206, 235, 0.3);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);  /* Softer blue glow */
             opacity: 1;
         }
         .projects-grid { 
@@ -130,7 +133,7 @@
         .project:hover { 
             transform: translateY(-8px) scale(1.02); 
             box-shadow: var(--shadow-hover); 
-            border-color: rgba(135, 206, 235, 0.2);
+            border-color: rgba(59, 130, 246, 0.2);  /* Muted blue border */
         }
         .project h3 { 
             font-size: 1.375rem; 
@@ -156,6 +159,7 @@
             position: relative; 
             transition: all 0.3s ease;
             padding-bottom: 0.25rem;
+            text-shadow: none;  /* No shadow for links to keep clean */
         }
         .project-links a::after { 
             content: ''; 
@@ -197,14 +201,14 @@
             box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
         }
         footer a { 
-            color: #AED6F1; 
+            color: #93C5FD;  /* Soft light blue matching gradient */
             text-decoration: none; 
             font-weight: 500;
             transition: color 0.3s ease;
         }
         footer a:hover { 
-            color: white; 
-            text-shadow: 0 0 8px rgba(174, 214, 241, 0.5);
+            color: #ffffff; 
+            text-shadow: 0 0 8px rgba(147, 197, 253, 0.5);  /* Muted light blue glow */
         }
         footer p { margin-bottom: 0.5rem; }
         /* Responsive tweaks for power on mobile */
@@ -229,7 +233,7 @@
     <header>
         <h1>Omar Khaled Mohamed Sobaih</h1>
         <h2>Software Engineer | AI & Machine Learning | Back-End Development | RESTful API | Python (Flask) & MySQ</h2>
-        <p>Dedicated Software Engineer specializing in backend development and Artificial Intelligence (AI). My passion lies in turning complex requirements into elegant, deployment-ready software solutions. I have hands-on experience designing and implementing scalable RESTful APIs and robust backend services using Python and Flask with MySQL for data persistence.</p>
+        <p>dedicated Software Engineer specializing in backend development and Artificial Intelligence (AI).My passion lies in turning complex requirements into elegant, deployment-ready software solutions. I have hands-on experience designing and implementing scalable RESTful APIs and robust backend services using Python and Flask with MySQL for data persistence.</p>
     </header>
     
     <section id="skills">
