@@ -6,6 +6,8 @@
     <title>Omar Khaled Mohamed Sobaih | Software Engineer</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Devicon for Tech Icons -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -50,9 +52,9 @@
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
         
         .glass-nav {
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -85,6 +87,13 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Icon sizing in skills */
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
     </style>
 </head>
 <body class="bg-dark text-slate-300 antialiased selection:bg-primary selection:text-white overflow-x-hidden relative">
@@ -96,6 +105,14 @@
         <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
     </div>
 
+    <!-- Floating Resume Button -->
+    <a href="path/to/your/resume.pdf" download class="fixed bottom-8 right-8 z-[60] flex items-center gap-2 px-6 py-3 bg-white text-dark font-bold rounded-full shadow-lg hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 group">
+        <svg class="w-5 h-5 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        <span>Download Resume</span>
+    </a>
+
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,16 +120,17 @@
                 <div class="flex-shrink-0 font-bold text-xl tracking-tighter text-white">
                     OK<span class="text-primary">.</span>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
                         <a href="#home" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                        <a href="#about" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#education" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Education</a>
+                        <a href="#certifications" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Certs</a>
                         <a href="#skills" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
                         <a href="#projects" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
-                        <a href="#contact" class="bg-primary/10 text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all">Contact</a>
+                        <a href="#about" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
                     </div>
                 </div>
-                <div class="md:hidden">
+                <div class="lg:hidden">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -121,13 +139,15 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-dark border-t border-slate-800">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-dark border-t border-slate-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#education" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Education</a>
+                <a href="#certifications" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Certifications</a>
                 <a href="#skills" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
                 <a href="#projects" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-                <a href="#contact" class="text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
             </div>
         </div>
     </nav>
@@ -143,7 +163,7 @@
                 <span class="text-gradient">Mohamed Sobaih</span>
             </h1>
             <p class="mt-4 text-xl md:text-2xl text-slate-400 max-w-3xl font-light animate-fade-in-up" style="animation-delay: 0.2s;">
-                Building <span class="text-white font-medium">intelligent backend software solutions</span> and specializing in <span class="text-white font-medium">AI & Machine Learning</span>.
+                Building <strong class="text-white">intelligent backend software solutions</strong> and specializing in <span class="text-white font-medium">AI & Machine Learning</span>.
             </p>
             <div class="mt-8 text-sm md:text-base font-mono text-primary animate-fade-in-up" style="animation-delay: 0.3s;">
                 Python • Flask • RESTful API • MySQL • TensorFlow
@@ -151,9 +171,80 @@
             <div class="mt-10 flex gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
                 <a href="#projects" class="px-8 py-3 rounded-full bg-primary text-white font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25">View Projects</a>
                 <a href="https://github.com/OmarKhaled3125" target="_blank" class="px-8 py-3 rounded-full border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-white transition-all flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <i class="devicon-github-original text-xl"></i>
                     GitHub
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 relative bg-dark/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-4">
+                    <span class="w-12 h-1 bg-primary rounded-full"></span>
+                    Education
+                </h2>
+                <div class="glass-card p-8 rounded-2xl border-l-4 border-l-primary flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Bachelor's Degree in Computer Science & IT</h3>
+                        <p class="text-lg text-slate-400">The Egyptian E-Learning University</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="px-4 py-2 bg-primary/20 text-primary font-mono font-bold rounded-lg border border-primary/30">
+                            Class of 2025
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Certifications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Cert 1 -->
+                    <div class="glass-card rounded-xl overflow-hidden group">
+                        <!-- Updated Source: pointing to local folder -->
+                        <div class="h-48 bg-slate-800 relative overflow-hidden">
+                            <img src="images/ccna-intro.png" onerror="this.src='https://via.placeholder.com/400x300/1e293b/ffffff?text=CCNA+Intro'" alt="CCNA Intro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">CCNA v7: Introduction to Networks</h3>
+                            <p class="text-sm text-slate-500">Cisco</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="glass-card rounded-xl overflow-hidden group">
+                        <!-- Updated Source: pointing to local folder -->
+                        <div class="h-48 bg-slate-800 relative overflow-hidden">
+                            <img src="images/ccna-switching.png" onerror="this.src='https://via.placeholder.com/400x300/1e293b/ffffff?text=CCNA+Switching'" alt="CCNA Switching" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">CCNA v7: Switching, Routing & Wireless</h3>
+                            <p class="text-sm text-slate-500">Cisco</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="glass-card rounded-xl overflow-hidden group">
+                        <!-- Updated Source: pointing to local folder -->
+                        <div class="h-48 bg-slate-800 relative overflow-hidden">
+                            <img src="images/sc-900.png" onerror="this.src='https://via.placeholder.com/400x300/1e293b/ffffff?text=SC-900'" alt="SC-900" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Microsoft SC-900</h3>
+                            <p class="text-sm text-slate-500">Security, Compliance, and Identity Fundamentals</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -166,10 +257,12 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Back-End Development -->
                     <div class="glass-card p-6 rounded-xl">
-                        <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
-                            Back-End Development
-                        </h3>
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="devicon-python-plain text-2xl text-blue-400"></i>
+                            <i class="devicon-java-plain text-2xl text-orange-400"></i>
+                            <i class="devicon-flask-original text-2xl text-white"></i>
+                            <h3 class="text-xl font-semibold text-white ml-auto">Backend Dev</h3>
+                        </div>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag text-blue-300 border-slate-700">Python</span>
                             <span class="skill-tag text-blue-300 border-slate-700">Flask</span>
@@ -183,10 +276,11 @@
 
                     <!-- AI & Machine Learning -->
                     <div class="glass-card p-6 rounded-xl">
-                        <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                            AI & Machine Learning
-                        </h3>
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="devicon-tensorflow-original text-2xl text-orange-500"></i>
+                            <i class="devicon-pytorch-original text-2xl text-red-500"></i>
+                            <h3 class="text-xl font-semibold text-white ml-auto">AI & ML</h3>
+                        </div>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag text-purple-300 border-slate-700">TensorFlow</span>
                             <span class="skill-tag text-purple-300 border-slate-700">Transformers</span>
@@ -198,10 +292,12 @@
 
                     <!-- Tools & Others -->
                     <div class="glass-card p-6 rounded-xl">
-                        <h3 class="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                            Tools & Others
-                        </h3>
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="devicon-git-plain text-2xl text-red-400"></i>
+                            <i class="devicon-vscode-plain text-2xl text-blue-500"></i>
+                            <i class="devicon-postman-plain text-2xl text-orange-600"></i>
+                            <h3 class="text-xl font-semibold text-white ml-auto">Tools</h3>
+                        </div>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-tag text-pink-300 border-slate-700">Git / GitHub</span>
                             <span class="skill-tag text-pink-300 border-slate-700">Postman</span>
@@ -230,7 +326,7 @@
                             <span class="project-badge text-blue-400 bg-blue-500/10">EdTech</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Full-stack edtech platform utilizing AI for personalized education. Features DeepSpeech for speech-to-text and BART for grammar correction, wrapped in a robust structured lesson system.
+                            Full-stack edtech platform utilizing AI for personalized education. Features DeepSpeech for speech-to-text and BART for grammar correction.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">Flask</span>
@@ -238,8 +334,7 @@
                             <span class="tech-tag">AI Models</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/0158-Graduation-Project" target="_blank" class="project-link hover:text-primary">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -253,7 +348,7 @@
                             <span class="project-badge text-purple-400 bg-purple-500/20">Desktop</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Secure CRUD productivity suite utilizing a Flask REST API with JWT authentication. Features a responsive PyQt5 desktop GUI client for managing tasks efficiently.
+                            Secure CRUD productivity suite utilizing a Flask REST API with JWT authentication. Features a responsive PyQt5 desktop GUI client.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">PyQt5</span>
@@ -261,8 +356,7 @@
                             <span class="tech-tag">Bcrypt</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Task-Manager" target="_blank" class="project-link hover:text-secondary">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -276,7 +370,7 @@
                             <span class="project-badge text-green-400 bg-green-500/20">NLP</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            A conversational AI utilizing Hugging Face Transformers (DialoGPT-medium). Handles multi-turn conversations with session history context, demonstrating efficient NLP deployment.
+                            A conversational AI utilizing Hugging Face Transformers (DialoGPT-medium). Handles multi-turn conversations with session history context.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">Transformers</span>
@@ -284,8 +378,7 @@
                             <span class="tech-tag">Python</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Chatbot_Assistant" target="_blank" class="project-link hover:text-green-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -299,7 +392,7 @@
                             <span class="project-badge text-red-400 bg-red-500/10">Healthcare AI</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            A Random Forest Classifier that categorizes brain MRI images into four classes (glioma, meningioma, notumor, pituitary). Includes a full training pipeline and Excel reporting.
+                            A Random Forest Classifier that categorizes brain MRI images into four classes (glioma, meningioma, notumor, pituitary).
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">Python</span>
@@ -307,8 +400,7 @@
                             <span class="tech-tag">Scikit-learn</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Brain-Tumor-Classification-by-Random-Forest-Algorithm.git" target="_blank" class="project-link hover:text-red-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -322,7 +414,7 @@
                             <span class="project-badge text-yellow-400 bg-yellow-500/10">Embedded Sys</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Simulation system with a Python/Tkinter GUI. Controls relays based on light intensity sensors and pushes real-time telemetry to the ThingSpeak cloud dashboard.
+                            Simulation system with a Python/Tkinter GUI. Controls relays based on light intensity sensors and pushes real-time telemetry.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">Python</span>
@@ -330,8 +422,7 @@
                             <span class="tech-tag">ThingSpeak</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Smart-Lighting-Embedded-System-Simulation.git" target="_blank" class="project-link hover:text-yellow-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -345,7 +436,7 @@
                             <span class="project-badge text-green-400 bg-green-500/10">NLP</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Comparative study of ML algorithms (Naive Bayes, Logistic Regression, SVM, Random Forest) on NLTK movie reviews to determine sentiment accuracy.
+                            Comparative study of ML algorithms (Naive Bayes, Logistic Regression, SVM, Random Forest) on NLTK movie reviews.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">Python</span>
@@ -353,8 +444,7 @@
                             <span class="tech-tag">Pandas</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Movie-Reviews-Sentiment-Analysis.git" target="_blank" class="project-link hover:text-green-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -368,7 +458,7 @@
                             <span class="project-badge text-cyan-400 bg-cyan-500/10">Architecture</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Robust Java application delivering real-time weather updates. Built using strict OOP principles and design patterns (Singleton, Factory, Strategy) for extensibility.
+                            Robust Java application delivering real-time weather updates. Built using strict OOP principles and design patterns.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">Java</span>
@@ -376,8 +466,7 @@
                             <span class="tech-tag">OOP</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Weather-Monitoring-System.git" target="_blank" class="project-link hover:text-cyan-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -399,8 +488,7 @@
                             <span class="tech-tag">Ant Build</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/CPU-Scheduling-Algorithms.git" target="_blank" class="project-link hover:text-indigo-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -414,7 +502,7 @@
                             <span class="project-badge text-yellow-400 bg-yellow-500/10">Game Dev</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            A complete recreation of the classic Pac-Man arcade game. Built from scratch using C++ and the OpenGL/GLUT library for real-time graphics rendering.
+                            A complete recreation of the classic Pac-Man arcade game. Built from scratch using C++ and the OpenGL/GLUT library.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">C++</span>
@@ -422,8 +510,7 @@
                             <span class="tech-tag">GLUT</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Pac-Man-2D-Video-Game.git" target="_blank" class="project-link hover:text-yellow-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -437,7 +524,7 @@
                             <span class="project-badge text-purple-400 bg-purple-500/10">AI Logic</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            An unbeatable Tic-Tac-Toe opponent powered by the Minimax algorithm with Alpha-Beta pruning optimizations for decision efficiency.
+                            An unbeatable Tic-Tac-Toe opponent powered by the Minimax algorithm with Alpha-Beta pruning optimizations.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">Python</span>
@@ -445,8 +532,7 @@
                             <span class="tech-tag">Alpha-Beta</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Tic-Tac-Toe-MiniMax-Algorithm-with-Alpha-Beta-Pruning.git" target="_blank" class="project-link hover:text-purple-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -460,7 +546,7 @@
                             <span class="project-badge text-blue-400 bg-blue-500/10">Frontend</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            A multi-page static e-commerce website for a clothing store. Features product categorization, responsive design, and mock checkout flows.
+                            A multi-page static e-commerce website for a clothing store. Features product categorization and mock checkout flows.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="tech-tag">HTML5</span>
@@ -468,12 +554,31 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <a href="https://github.com/OmarKhaled3125/Clothing-Store-Website.git" target="_blank" class="project-link hover:text-blue-400">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            View Code
+                            <i class="devicon-github-original"></i> View Code
                         </a>
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative bg-dark/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-4">
+                    <span class="w-12 h-1 bg-primary rounded-full"></span>
+                    Professional Summary
+                </h2>
+                <div class="bg-surface/50 rounded-2xl p-8 border border-slate-700/50">
+                    <p class="text-lg leading-relaxed text-slate-300">
+                        I am a dedicated <strong class="text-white">Software Engineer</strong> with a passion for turning complex requirements into elegant, deployment-ready software solutions. 
+                    </p>
+                    <p class="mt-4 text-lg leading-relaxed text-slate-300">
+                        My expertise centers on scalable backend development using <span class="text-primary font-mono text-sm">Python</span> and <span class="text-primary font-mono text-sm">Flask</span>, integrated with robust data persistence via MySQL. I am also deeply involved in the AI space, building intelligent APIs that bridge the gap between Machine Learning models and real-world applications.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -499,7 +604,7 @@
             </div>
             
             <p class="text-slate-500 text-sm">
-                &copy; 2023 Omar Khaled. Built with precision.
+                &copy; 2025 Omar Khaled. Built with precision.
             </p>
         </div>
     </footer>
