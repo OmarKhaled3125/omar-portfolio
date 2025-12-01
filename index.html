@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Khaled Mohamed Sobaih | Software Engineer</title>
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Devicon for Tech Icons -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -98,14 +95,12 @@
 </head>
 <body class="bg-dark text-slate-300 antialiased selection:bg-primary selection:text-white overflow-x-hidden relative">
 
-    <!-- Background Glow Effects -->
     <div class="fixed inset-0 w-full h-full pointer-events-none z-[-1] overflow-hidden">
         <div class="absolute top-0 -left-4 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div class="absolute top-0 -right-4 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
         <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
     </div>
 
-    <!-- Floating Resume Button -->
     <a href="resume.pdf" download="Omar_Khaled_Resume" class="fixed bottom-8 right-8 z-[60] flex items-center gap-2 px-6 py-3 bg-white text-dark font-bold rounded-full shadow-lg hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 group">
         <svg class="w-5 h-5 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
@@ -113,7 +108,6 @@
         <span>Download Resume</span>
     </a>
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -139,7 +133,6 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-dark border-t border-slate-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
@@ -152,7 +145,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-10">
             <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary uppercase bg-primary/10 rounded-full animate-fade-in-up">
@@ -178,7 +170,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" class="py-20 relative bg-dark/50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal">
@@ -201,16 +192,13 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications" class="py-20 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal">
                 <h2 class="text-3xl font-bold text-white mb-12 text-center">Certifications</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     
-                    <!-- Cert 1 -->
                     <div class="glass-card rounded-xl overflow-hidden group">
-                        <!-- Updated Source: pointing to certifications folder -->
                         <div class="h-48 bg-slate-800 relative overflow-hidden">
                             <img src="certifications/ccna-intro.png" onerror="this.src='https://via.placeholder.com/400x300/1e293b/ffffff?text=CCNA+Intro'" alt="CCNA Intro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
                         </div>
@@ -220,9 +208,7 @@
                         </div>
                     </div>
 
-                    <!-- Cert 2 -->
                     <div class="glass-card rounded-xl overflow-hidden group">
-                        <!-- Updated Source: pointing to certifications folder -->
                         <div class="h-48 bg-slate-800 relative overflow-hidden">
                             <img src="certifications/ccna-switching.png" onerror="this.src='https://via.placeholder.com/400x300/1e293b/ffffff?text=CCNA+Switching'" alt="CCNA Switching" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
                         </div>
@@ -232,9 +218,7 @@
                         </div>
                     </div>
 
-                    <!-- Cert 3 -->
                     <div class="glass-card rounded-xl overflow-hidden group">
-                        <!-- Updated Source: pointing to certifications folder -->
                         <div class="h-48 bg-slate-800 relative overflow-hidden">
                             <img src="certifications/sc-900.png" onerror="this.src='https://via.placeholder.com/400x300/1e293b/ffffff?text=SC-900'" alt="SC-900" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
                         </div>
@@ -249,13 +233,27 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="py-20 relative bg-dark/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal">
                 <h2 class="text-3xl font-bold text-white mb-12 text-center">Technical Arsenal</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Back-End Development -->
+                    
+                    <div class="glass-card p-6 rounded-xl">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="devicon-html5-plain text-2xl text-orange-500"></i>
+                            <i class="devicon-css3-plain text-2xl text-blue-500"></i>
+                            <i class="devicon-javascript-plain text-2xl text-yellow-400"></i>
+                            <h3 class="text-xl font-semibold text-white ml-auto">Front-End Dev</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-orange-300 border-slate-700">HTML</span>
+                            <span class="skill-tag text-blue-300 border-slate-700">CSS</span>
+                            <span class="skill-tag text-cyan-300 border-slate-700">Tailwind.css</span>
+                            <span class="skill-tag text-yellow-300 border-slate-700">JavaScript</span>
+                        </div>
+                    </div>
+
                     <div class="glass-card p-6 rounded-xl">
                         <div class="flex items-center gap-3 mb-4">
                             <i class="devicon-python-plain text-2xl text-blue-400"></i>
@@ -274,7 +272,6 @@
                         </div>
                     </div>
 
-                    <!-- AI & Machine Learning -->
                     <div class="glass-card p-6 rounded-xl">
                         <div class="flex items-center gap-3 mb-4">
                             <i class="devicon-tensorflow-original text-2xl text-orange-500"></i>
@@ -290,7 +287,6 @@
                         </div>
                     </div>
 
-                    <!-- Tools & Others -->
                     <div class="glass-card p-6 rounded-xl">
                         <div class="flex items-center gap-3 mb-4">
                             <i class="devicon-git-plain text-2xl text-red-400"></i>
@@ -310,14 +306,12 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-white mb-12 text-center">Featured Projects</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- 1. LinguaZone (Updated with Documentation Button) -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
                     <div class="p-8">
@@ -337,7 +331,6 @@
                             <a href="https://github.com/OmarKhaled3125/0158-Graduation-Project" target="_blank" class="project-link hover:text-primary">
                                 <i class="devicon-github-original"></i> View Code
                             </a>
-                            <!-- Documentation Button -->
                             <a href="documentations/linguazone.pdf" download class="project-link hover:text-cyan-400">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                                 Documentation
@@ -346,7 +339,6 @@
                     </div>
                 </div>
 
-                <!-- 2. Task Manager -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal" style="transition-delay: 100ms;">
                     <div class="h-3 bg-gradient-to-r from-purple-500 to-pink-500"></div>
                     <div class="p-8">
@@ -368,7 +360,6 @@
                     </div>
                 </div>
 
-                <!-- 3. Chatbot Assistant -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal" style="transition-delay: 200ms;">
                     <div class="h-3 bg-gradient-to-r from-green-500 to-emerald-400"></div>
                     <div class="p-8">
@@ -390,7 +381,33 @@
                     </div>
                 </div>
 
-                <!-- 4. Brain Tumor Classification -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal">
+                    <div class="h-3 bg-gradient-to-r from-cyan-400 to-blue-600"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">SaaS Features Grid</h3>
+                            <span class="project-badge text-cyan-400 bg-cyan-500/10">Front-End</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            A responsive, modern features grid section designed for SaaS landing pages. Implemented using semantic HTML and utility-first CSS.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <a href="https://github.com/OmarKhaled3125/SaaS-Features-Grid.git" target="_blank" class="project-link hover:text-cyan-400">
+                                <i class="devicon-github-original"></i> View Code
+                            </a>
+                            <a href="https://omarkhaled3125.github.io/SaaS-Features-Grid/" target="_blank" class="project-link hover:text-primary">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-red-500 to-pink-500"></div>
                     <div class="p-8">
@@ -412,7 +429,6 @@
                     </div>
                 </div>
 
-                <!-- 5. Smart Lighting -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-yellow-500 to-orange-400"></div>
                     <div class="p-8">
@@ -434,7 +450,6 @@
                     </div>
                 </div>
 
-                <!-- 6. Movie Sentiment -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-green-500 to-teal-400"></div>
                     <div class="p-8">
@@ -456,7 +471,6 @@
                     </div>
                 </div>
 
-                <!-- 7. Weather System -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-cyan-600 to-blue-500"></div>
                     <div class="p-8">
@@ -478,7 +492,6 @@
                     </div>
                 </div>
 
-                <!-- 8. CPU Scheduling -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-slate-600 to-indigo-500"></div>
                     <div class="p-8">
@@ -500,7 +513,6 @@
                     </div>
                 </div>
 
-                <!-- 9. Pac-Man -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-red-600 to-yellow-500"></div>
                     <div class="p-8">
@@ -522,7 +534,6 @@
                     </div>
                 </div>
 
-                <!-- 10. Tic-Tac-Toe AI -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-purple-600 to-pink-500"></div>
                     <div class="p-8">
@@ -544,7 +555,6 @@
                     </div>
                 </div>
 
-                <!-- 11. Clothing Store -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-blue-400 to-indigo-600"></div>
                     <div class="p-8">
@@ -570,7 +580,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-20 relative bg-dark/50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal">
@@ -590,7 +599,6 @@
         </div>
     </section>
 
-    <!-- Footer / Contact -->
     <footer id="contact" class="bg-black/40 border-t border-slate-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl font-bold text-white mb-8">Let's Connect</h2>
@@ -616,7 +624,6 @@
         </div>
     </footer>
 
-    <!-- CSS Components -->
     <style>
         .skill-tag {
             padding: 0.25rem 0.75rem;
