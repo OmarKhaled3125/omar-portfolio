@@ -354,9 +354,16 @@
                             <span class="tech-tag">JWT</span>
                             <span class="tech-tag">Bcrypt</span>
                         </div>
-                        <a href="https://github.com/OmarKhaled3125/Task-Manager" target="_blank" class="project-link hover:text-secondary">
-                            <i class="devicon-github-original"></i> View Code
-                        </a>
+                        
+                        <div class="flex items-center gap-6">
+                            <a href="https://github.com/OmarKhaled3125/Task-Manager" target="_blank" class="project-link hover:text-secondary">
+                                <i class="devicon-github-original"></i> View Code
+                            </a>
+                            <button onclick="openModal('taskManager')" class="project-link hover:text-purple-400 focus:outline-none">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                Screenshots
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -659,6 +666,34 @@
         }
     </style>
 
+    <div id="screenshot-modal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeModal()"></div>
+        
+        <div class="relative z-10 w-full h-full flex flex-col items-center justify-center p-4">
+            
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <div class="relative max-w-5xl w-full flex items-center justify-center">
+                
+                <button onclick="changeSlide(-1)" class="absolute left-0 md:-left-12 p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <img id="modal-image" src="" alt="Project Screenshot" class="max-h-[80vh] max-w-full rounded-lg shadow-2xl border border-white/10">
+
+                <button onclick="changeSlide(1)" class="absolute right-0 md:-right-12 p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+
+            <div class="mt-4 text-slate-400 font-mono text-sm">
+                <span id="modal-counter">1 / 2</span>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
@@ -700,6 +735,68 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        /* --- Screenshot Modal Logic --- */
+    
+        // DATA: Configuration based on your request
+        const projectImages = {
+            'taskManager': [
+                'Screenshots/Task Manager/Signup.png',
+                'Screenshots/Task Manager/Dashboard.png'
+            ]
+        };
+
+        let currentProject = '';
+        let currentImageIndex = 0;
+        const modal = document.getElementById('screenshot-modal');
+        const modalImg = document.getElementById('modal-image');
+        const modalCounter = document.getElementById('modal-counter');
+
+        function openModal(projectId) {
+            if (!projectImages[projectId]) return;
+            
+            currentProject = projectId;
+            currentImageIndex = 0;
+            updateModalImage();
+            
+            modal.classList.remove('hidden');
+            // Small timeout to allow display:block to apply before opacity transition
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeSlide(direction) {
+            const images = projectImages[currentProject];
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            updateModalImage();
+        }
+
+        function updateModalImage() {
+            const images = projectImages[currentProject];
+            modalImg.src = images[currentImageIndex];
+            modalCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+            if (!modal.classList.contains('hidden')) {
+                if (e.key === 'ArrowLeft') changeSlide(-1);
+                if (e.key === 'ArrowRight') changeSlide(1);
+            }
         });
     </script>
 </body>
