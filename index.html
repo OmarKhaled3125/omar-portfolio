@@ -157,7 +157,6 @@
             <p class="mt-4 text-xl md:text-2xl text-slate-400 max-w-3xl font-light animate-fade-in-up" style="animation-delay: 0.2s;">
                 Building <strong class="text-white">intelligent backend software solutions</strong> and specializing in <span class="text-white font-medium">AI & Machine Learning</span>.
             </p>
-            <!-- Removed skills list from header here -->
             <div class="mt-10 flex gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
                 <a href="#projects" class="px-8 py-3 rounded-full bg-primary text-white font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25">View Projects</a>
                 <a href="https://github.com/OmarKhaled3125" target="_blank" class="px-8 py-3 rounded-full border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-white transition-all flex items-center gap-2">
@@ -274,14 +273,16 @@
                         </div>
                     </div>
 
-                    <!-- Databases -->
+                    <!-- Databases (Updated with PostgreSQL) -->
                     <div class="glass-card p-6 rounded-xl">
                         <div class="flex items-center gap-3 mb-4">
+                            <i class="devicon-postgresql-plain text-2xl text-blue-400"></i>
                             <i class="devicon-mysql-plain text-2xl text-blue-500"></i>
                             <i class="devicon-sqlalchemy-plain text-2xl text-red-500"></i>
                             <h3 class="text-xl font-semibold text-white ml-auto">Databases</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-blue-400 border-slate-700">PostgreSQL</span>
                             <span class="skill-tag text-emerald-300 border-slate-700">MySQL</span>
                             <span class="skill-tag text-emerald-300 border-slate-700">SQL</span>
                             <span class="skill-tag text-emerald-300 border-slate-700">SQLAlchemy</span>
@@ -304,7 +305,7 @@
                         </div>
                     </div>
 
-                    <!-- IT & Networking (NEW) -->
+                    <!-- IT & Networking -->
                     <div class="glass-card p-6 rounded-xl">
                         <div class="flex items-center gap-3 mb-4">
                             <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -346,7 +347,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- LinguaZone -->
+                <!-- 1. LinguaZone -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
                     <div class="p-8">
@@ -374,28 +375,27 @@
                     </div>
                 </div>
 
-                <!-- Task Manager -->
+                <!-- 2. NexusRate Dashboard (NEW) -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal" style="transition-delay: 100ms;">
-                    <div class="h-3 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <div class="h-3 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-secondary transition-colors">Task Manager</h3>
-                            <span class="project-badge text-purple-400 bg-purple-500/20">Desktop</span>
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">NexusRate</h3>
+                            <span class="project-badge text-indigo-400 bg-indigo-500/10">Analytics</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Secure CRUD productivity suite utilizing a Flask REST API with JWT authentication. Features a responsive PyQt5 desktop GUI client.
+                            Real-time dashboard for live market analytics, visualizing currency exchange rates and trends with interactive charts using Streamlit.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="tech-tag">PyQt5</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">Bcrypt</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Pandas</span>
                         </div>
-                        
                         <div class="flex items-center gap-6">
-                            <a href="https://github.com/OmarKhaled3125/Task-Manager" target="_blank" class="project-link hover:text-secondary">
+                            <a href="https://github.com/OmarKhaled3125/NexusRate-Dashboard-for-Live-Market-Analytics.git" target="_blank" class="project-link hover:text-indigo-400">
                                 <i class="devicon-github-original"></i> View Code
                             </a>
-                            <button onclick="openModal('taskManager')" class="project-link hover:text-purple-400 focus:outline-none">
+                            <button onclick="openModal('nexusRate')" class="project-link hover:text-indigo-400 focus:outline-none">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 Screenshots
                             </button>
@@ -403,7 +403,7 @@
                     </div>
                 </div>
 
-                <!-- Chatbot Assistant -->
+                <!-- 3. Chatbot Assistant -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal" style="transition-delay: 200ms;">
                     <div class="h-3 bg-gradient-to-r from-green-500 to-emerald-400"></div>
                     <div class="p-8">
@@ -431,7 +431,36 @@
                     </div>
                 </div>
 
-                <!-- SaaS Features Grid -->
+                <!-- 4. Task Manager -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal">
+                    <div class="h-3 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-secondary transition-colors">Task Manager</h3>
+                            <span class="project-badge text-purple-400 bg-purple-500/20">Desktop</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Secure CRUD productivity suite utilizing a Flask REST API with JWT authentication. Features a responsive PyQt5 desktop GUI client.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-tag">PyQt5</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Bcrypt</span>
+                        </div>
+                        
+                        <div class="flex items-center gap-6">
+                            <a href="https://github.com/OmarKhaled3125/Task-Manager" target="_blank" class="project-link hover:text-secondary">
+                                <i class="devicon-github-original"></i> View Code
+                            </a>
+                            <button onclick="openModal('taskManager')" class="project-link hover:text-purple-400 focus:outline-none">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                Screenshots
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. SaaS Features Grid -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-cyan-400 to-blue-600"></div>
                     <div class="p-8">
@@ -459,7 +488,7 @@
                     </div>
                 </div>
 
-                <!-- E-commerce Shop (Restored React Project) -->
+                <!-- 6. E-commerce Shop -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
                     <div class="p-8">
@@ -487,7 +516,7 @@
                     </div>
                 </div>
 
-                <!-- Smart IoT Lighting -->
+                <!-- 7. Smart IoT Lighting -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-yellow-500 to-orange-400"></div>
                     <div class="p-8">
@@ -515,7 +544,7 @@
                     </div>
                 </div>
 
-                <!-- Sentiment Analyzer -->
+                <!-- 8. Sentiment Analyzer -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-green-500 to-teal-400"></div>
                     <div class="p-8">
@@ -543,7 +572,7 @@
                     </div>
                 </div>
 
-                <!-- Brain Tumor -->
+                <!-- 9. Brain Tumor -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-red-500 to-pink-500"></div>
                     <div class="p-8">
@@ -571,7 +600,7 @@
                     </div>
                 </div>
 
-                <!-- Weather Monitor -->
+                <!-- 10. Weather Monitor -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-cyan-600 to-blue-500"></div>
                     <div class="p-8">
@@ -599,7 +628,7 @@
                     </div>
                 </div>
 
-                <!-- OS CPU Scheduler -->
+                <!-- 11. OS CPU Scheduler -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-slate-600 to-indigo-500"></div>
                     <div class="p-8">
@@ -627,7 +656,7 @@
                     </div>
                 </div>
 
-                <!-- Pac-Man -->
+                <!-- 12. Pac-Man -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-red-600 to-yellow-500"></div>
                     <div class="p-8">
@@ -649,7 +678,7 @@
                     </div>
                 </div>
 
-                <!-- Minimax AI Game -->
+                <!-- 13. Minimax AI Game -->
                 <div class="glass-card rounded-2xl overflow-hidden group reveal">
                     <div class="h-3 bg-gradient-to-r from-purple-600 to-pink-500"></div>
                     <div class="p-8">
@@ -700,7 +729,7 @@
             
             <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
                 <a href="mailto:okms968@gmail.com" class="flex items-center gap-2 px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-all">
-                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     omarkd1250@gmail.com
                 </a>
                 <a href="tel:01278286325" class="flex items-center gap-2 px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-all">
@@ -859,6 +888,9 @@
             ],
             'sentimentAnalyzer': [
                 'Demos/Sentiment Analyzer/Demo.mp4'
+            ],
+            'nexusRate': [
+                'Screenshots/NexusRate/NexusRate.png'
             ]
         };
 
