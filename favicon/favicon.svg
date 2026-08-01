@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* Default styling for Light Mode */
+    .icon-shape {
+      fill: #000000;
+      transition: fill 0.3s ease;
+    }
+    
+    /* Dynamic styling for Dark Mode */
+    @media (prefers-color-scheme: dark) {
+      .icon-shape {
+        fill: #ffffff;
+      }
+    }
+  </style>
+  
+  <rect class="icon-shape" x="10" y="10" width="80" height="80" rx="4" />
+</svg>
