@@ -373,10 +373,10 @@
                             <a href="https://github.com/OmarKhaled3125/0158-Graduation-Project" target="_blank" class="project-link hover:text-primary">
                                 <i class="devicon-github-original"></i> View Code
                             </a>
-                            <a href="documentations/linguazone.pdf" download class="project-link hover:text-cyan-400">
+                            <button onclick="openDocumentModal('linguazone')" class="project-link hover:text-cyan-400 focus:outline-none">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                                 Documentation
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -402,10 +402,10 @@
                             <a href="https://github.com/OmarKhaled3125/Aether.git" target="_blank" class="project-link hover:text-gray-300">
                                 <i class="devicon-github-original"></i> View Code
                             </a>
-                            <a href="documentations/aether.pdf" download class="project-link hover:text-gray-300">
+                            <button onclick="openDocumentModal('aether')" class="project-link hover:text-gray-300 focus:outline-none">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                                 Documentation
-                            </a>
+                            </button>
                             <button onclick="openModal('aether')" class="project-link hover:text-indigo-400 focus:outline-none">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 Screenshots
@@ -840,7 +840,7 @@
             <div class="relative max-w-6xl w-full h-[80vh] flex items-center justify-center">
                 
                 <!-- Prev Button -->
-                <button onclick="changeSlide(-1)" class="absolute left-0 md:-left-12 p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all z-20">
+                <button id="modal-prev-btn" onclick="changeSlide(-1)" class="absolute left-0 md:-left-12 p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all z-20">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
 
@@ -854,17 +854,23 @@
                         <source src="" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+
+                    <!-- PDF Viewer -->
+                    <iframe id="modal-pdf" class="hidden w-full h-full rounded-lg shadow-2xl border border-white/10 bg-white" src=""></iframe>
                 </div>
 
                 <!-- Next Button -->
-                <button onclick="changeSlide(1)" class="absolute right-0 md:-right-12 p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all z-20">
+                <button id="modal-next-btn" onclick="changeSlide(1)" class="absolute right-0 md:-right-12 p-2 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all z-20">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
             </div>
 
             <!-- Caption/Counter -->
-            <div class="mt-4 text-slate-400 font-mono text-sm">
+            <div class="mt-4 flex flex-col items-center gap-3 text-slate-400 font-mono text-sm">
                 <span id="modal-counter">1 / 1</span>
+                <a id="modal-download" href="" download class="hidden px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all">
+                    Download PDF
+                </a>
             </div>
         </div>
     </div>
@@ -941,17 +947,28 @@
             ]
         };
 
+        const projectDocuments = {
+            'linguazone': 'documentations/linguazone.pdf',
+            'aether': 'documentations/aether.pdf'
+        };
+
         let currentProject = '';
         let currentImageIndex = 0;
+        let currentMode = 'media';
         const modal = document.getElementById('screenshot-modal');
         const modalImg = document.getElementById('modal-image');
         const modalVideo = document.getElementById('modal-video');
+        const modalPdf = document.getElementById('modal-pdf');
         const modalCounter = document.getElementById('modal-counter');
+        const modalDownload = document.getElementById('modal-download');
+        const modalPrevBtn = document.getElementById('modal-prev-btn');
+        const modalNextBtn = document.getElementById('modal-next-btn');
 
         function openModal(projectId) {
             if (!projectMedia[projectId]) return;
             
             currentProject = projectId;
+            currentMode = 'media';
             currentImageIndex = 0;
             updateModalContent();
             
@@ -960,6 +977,21 @@
                 modal.classList.remove('opacity-0');
             }, 10);
             document.body.style.overflow = 'hidden'; 
+        }
+
+        function openDocumentModal(documentId) {
+            if (!projectDocuments[documentId]) return;
+
+            currentProject = documentId;
+            currentMode = 'document';
+            currentImageIndex = 0;
+            updateModalContent();
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
@@ -974,22 +1006,37 @@
         }
 
         function changeSlide(direction) {
+            if (currentMode !== 'media') return;
+
             const mediaList = projectMedia[currentProject];
             currentImageIndex = (currentImageIndex + direction + mediaList.length) % mediaList.length;
             updateModalContent();
         }
 
         function updateModalContent() {
+            modalImg.classList.add('hidden');
+            modalVideo.classList.add('hidden');
+            modalPdf.classList.add('hidden');
+            modalVideo.pause();
+            modalDownload.classList.add('hidden');
+            modalPrevBtn.classList.toggle('hidden', currentMode !== 'media');
+            modalNextBtn.classList.toggle('hidden', currentMode !== 'media');
+
+            if (currentMode === 'document') {
+                const documentUrl = projectDocuments[currentProject];
+                modalPdf.src = documentUrl;
+                modalPdf.classList.remove('hidden');
+                modalDownload.href = documentUrl;
+                modalDownload.classList.remove('hidden');
+                modalCounter.textContent = 'PDF Preview';
+                return;
+            }
+
             const mediaList = projectMedia[currentProject];
             const currentItem = mediaList[currentImageIndex];
             
             // Check if it's a video file based on extension
             const isVideo = currentItem.toLowerCase().endsWith('.mp4');
-
-            // Reset state
-            modalImg.classList.add('hidden');
-            modalVideo.classList.add('hidden');
-            modalVideo.pause();
 
             if (isVideo) {
                 modalVideo.src = currentItem;
