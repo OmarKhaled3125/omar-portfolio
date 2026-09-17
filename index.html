@@ -3,548 +3,890 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Khaled Mohamed Sobaih | Software Engineer</title>
+    <title>Omar Khaled Mohamed Sobaih | Software Engineer & AI Specialist</title>
     
     <link rel="icon" href="favicon/favicon.ico" sizes="any">
     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
     
-    <!-- Changed font to Inter for a cleaner, more sophisticated editorial look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Premium Editorial Typography: Cinzel (Luxury Roman Serif) + Plus Jakarta Sans (Humanist Sans) + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        // Human-crafted, muted elegant palette
-                        primary: '#C6A87C', // Warm muted gold/sand
-                        secondary: '#A3A3A3', // Neutral muted gray
-                        dark: '#0A0A0A', // Deep matte black
-                        surface: '#141414', // Slightly elevated matte surface
-                        surfaceHover: '#1F1F1F', // Lighter matte for interactions
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
+                        dark: '#080808',
+                        darker: '#040404',
+                        surface: '#101014',
+                        surfaceHover: '#17171D',
+                        surfaceElevated: '#1D1D24',
+                        gold: {
+                            light: '#F5E8C7',
+                            DEFAULT: '#D4AF37',
+                            muted: '#A28438',
+                            dark: '#5F4B1B',
+                        },
+                        champagne: '#EFE2C6',
+                        borderGold: 'rgba(212, 175, 55, 0.16)',
+                        borderGoldHover: 'rgba(212, 175, 55, 0.42)',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Custom Scrollbar - Sleek and minimal */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #0A0A0A; }
-        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #404040; }
+        /* Bespoke Luxury Gold & Obsidian Scrollbar */
+        ::-webkit-scrollbar { width: 7px; }
+        ::-webkit-scrollbar-track { background: #080808; }
+        ::-webkit-scrollbar-thumb { 
+            background: #252219; 
+            border: 1px solid rgba(212, 175, 55, 0.25); 
+            border-radius: 4px; 
+        }
+        ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
         
-        /* Refined Matte Glassmorphism */
+        /* Gold text selection */
+        ::selection {
+            background: rgba(212, 175, 55, 0.32);
+            color: #FFF8E7;
+        }
+
+        /* Ambient Luxury Lighting & Texture */
+        body {
+            background-color: #080808;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.06) 0%, transparent 45%),
+                radial-gradient(circle at 85% 60%, rgba(162, 132, 56, 0.035) 0%, transparent 40%),
+                radial-gradient(circle at 15% 85%, rgba(212, 175, 55, 0.03) 0%, transparent 35%);
+            background-attachment: fixed;
+        }
+
+        /* Gold Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #FFF0CA 0%, #E5C158 35%, #D4AF37 60%, #9E7D2E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gold-subtle {
+            background: linear-gradient(135deg, #F3E5AB 0%, #C4A052 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Luxury Glass Navigation */
         .glass-nav {
-            background: rgba(10, 10, 10, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            background: rgba(8, 8, 8, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+            transition: all 0.35s ease;
+        }
+        .glass-nav.scrolled {
+            background: rgba(6, 6, 6, 0.94);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.9);
         }
 
-        .glass-card {
-            background: rgba(20, 20, 20, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Luxury Card with Gold Sheen */
+        .luxury-card {
+            background: linear-gradient(180deg, rgba(17, 17, 21, 0.88) 0%, rgba(11, 11, 14, 0.94) 100%);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(212, 175, 55, 0.14);
+            box-shadow: 0 14px 35px -15px rgba(0, 0, 0, 0.8);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
         }
-
-        .glass-card:hover {
-            border-color: rgba(198, 168, 124, 0.4); /* Primary color subtle border */
-            background: rgba(31, 31, 31, 0.8);
+        .luxury-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.35), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .luxury-card:hover {
+            border-color: rgba(212, 175, 55, 0.42);
+            background: linear-gradient(180deg, rgba(23, 23, 29, 0.9) 0%, rgba(14, 14, 18, 0.96) 100%);
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px -15px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 20px 45px -15px rgba(212, 175, 55, 0.12), 0 25px 50px -20px rgba(0, 0, 0, 0.95);
+        }
+        .luxury-card:hover::before {
+            opacity: 1;
         }
 
-        /* Subtle human-like emphasis instead of bright neon gradients */
-        .text-emphasis {
-            color: #C6A87C;
+        /* Gold Foil Button */
+        .gold-btn {
+            background: linear-gradient(135deg, #F5E0A3 0%, #D4AF37 50%, #A9832B 100%);
+            color: #080808;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.35);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .gold-btn:hover {
+            box-shadow: 0 6px 28px rgba(212, 175, 55, 0.55);
+            transform: translateY(-1px);
+            filter: brightness(1.05);
         }
 
+        /* Gold Outline Button */
+        .gold-outline-btn {
+            background: rgba(14, 14, 18, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.28);
+            color: #E8D9B8;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+        .gold-outline-btn:hover {
+            border-color: rgba(212, 175, 55, 0.65);
+            color: #FFFFFF;
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-1px);
+        }
+
+        /* Refined Editorial Section Badge */
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #D4AF37;
+            padding: 0.35rem 0.85rem;
+            background: rgba(212, 175, 55, 0.06);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            border-radius: 2px;
+        }
+
+        /* Project Badge */
+        .project-badge {
+            font-size: 0.7rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.6rem;
+            border-radius: 2px;
+            color: #D4AF37;
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        /* Monochromatic Tech Pills */
+        .tech-tag {
+            font-size: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: #A3A39E;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            background: rgba(10, 10, 14, 0.5);
+            padding: 0.25rem 0.6rem;
+            border-radius: 2px;
+            transition: all 0.25s ease;
+        }
+        .tech-tag:hover {
+            color: #E8D9B8;
+            border-color: rgba(212, 175, 55, 0.35);
+            background: rgba(212, 175, 55, 0.06);
+        }
+
+        /* Skill Tag */
+        .skill-tag {
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(12, 12, 16, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.14);
+            color: #B5B5AD;
+            border-radius: 2px;
+            font-size: 0.825rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            color: #FFF5DC;
+            border-color: #D4AF37;
+            background-color: rgba(212, 175, 55, 0.1);
+            transform: translateY(-1px);
+        }
+
+        /* Project Links */
+        .project-link {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #C2BFB4;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.25s ease;
+        }
+        .project-link:hover {
+            color: #D4AF37;
+            transform: translateX(2px);
+        }
+
+        /* Reveal on Scroll */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
-        .skill-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-        }
 
-        /* Skill tags - Monochromatic and clean */
-        .skill-tag {
-            padding: 0.25rem 0.75rem;
-            background-color: transparent;
-            border: 1px solid rgba(255,255,255,0.1);
-            color: #A3A3A3;
-            border-radius: 4px;
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-            transition: all 0.3s ease;
-        }
-        .skill-tag:hover {
-            color: #C6A87C;
-            border-color: #C6A87C;
-        }
-
-        .project-badge {
-            font-size: 0.75rem;
-            font-family: 'JetBrains Mono', monospace;
-            padding: 0.25rem 0.5rem;
-            border-radius: 2px;
-            color: #C6A87C;
-            background: rgba(198, 168, 124, 0.1);
-            border: 1px solid rgba(198, 168, 124, 0.2);
-        }
-        .tech-tag {
-            font-size: 0.75rem;
-            color: #737373;
-            border: 1px solid rgba(255,255,255,0.05);
-            background: rgba(0,0,0,0.2);
-            padding: 0.25rem 0.5rem;
-            border-radius: 2px;
-        }
-        .project-link {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #A3A3A3;
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-            transition: all 0.3s ease;
-        }
-        .project-link:hover {
-            color: #C6A87C;
+        /* Gold Hairline */
+        .gold-hairline {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
         }
     </style>
 </head>
-<body class="bg-dark text-slate-300 antialiased selection:bg-primary selection:text-dark overflow-x-hidden relative">
+<body class="text-stone-300 antialiased overflow-x-hidden relative font-sans selection:bg-gold/30 selection:text-gold-light">
 
-    <!-- Removed the neon glowing blobs to embrace clean lines and unblemished negative space -->
-
-    <a href="resume.pdf" download="Omar_Khaled_Resume" class="fixed bottom-8 right-8 z-[60] flex items-center gap-2 px-6 py-3 bg-white text-dark font-medium rounded-md shadow-lg hover:bg-primary hover:text-dark transition-all duration-300 group">
-        <svg class="w-5 h-5 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Floating Luxury Resume Download Action -->
+    <a href="resume.pdf" download="Omar_Khaled_Resume" 
+       class="fixed bottom-7 right-7 z-[60] flex items-center gap-3 px-5 py-3 rounded-full bg-darker/90 backdrop-blur-md text-stone-200 font-medium text-sm border border-gold/40 shadow-2xl hover:border-gold hover:text-white hover:shadow-[0_0_25px_rgba(212,175,55,0.3)] transition-all duration-300 group">
+        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+        <svg class="w-4 h-4 text-gold group-hover:translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
         </svg>
-        <span>Download Resume</span>
+        <span class="tracking-wide">Resume (PDF)</span>
     </a>
 
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0 font-bold text-xl tracking-tight text-white">
-                    OK<span class="text-primary">.</span>
-                </div>
-                <div class="hidden lg:block">
-                    <div class="ml-10 flex items-baseline space-x-6 font-light">
-                        <a href="#home" class="hover:text-primary px-3 py-2 text-sm transition-colors">Home</a>
-                        <a href="#education" class="hover:text-primary px-3 py-2 text-sm transition-colors">Education</a>
-                        <a href="#certifications" class="hover:text-primary px-3 py-2 text-sm transition-colors">Certs</a>
-                        <a href="#skills" class="hover:text-primary px-3 py-2 text-sm transition-colors">Skills</a>
-                        <a href="#projects" class="hover:text-primary px-3 py-2 text-sm transition-colors">Projects</a>
-                        <a href="#about" class="hover:text-primary px-3 py-2 text-sm transition-colors">About</a>
+    <!-- Navigation Header -->
+    <nav class="fixed w-full z-50 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Seal / Monogram -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-gold/5 group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(212,175,55,0.35)] transition-all duration-300">
+                        <span class="font-serif font-bold text-sm tracking-wider text-gold">OK</span>
                     </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-base tracking-widest text-stone-100 group-hover:text-gold transition-colors">
+                            OMAR KHALED
+                        </span>
+                        <span class="text-[9px] font-mono tracking-[0.25em] text-stone-400 uppercase">
+                            AI & Software Eng.
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8 font-sans text-xs tracking-wider uppercase font-medium">
+                    <a href="#home" class="text-stone-300 hover:text-gold transition-colors duration-200">Home</a>
+                    <a href="#education" class="text-stone-300 hover:text-gold transition-colors duration-200">Education</a>
+                    <a href="#certifications" class="text-stone-300 hover:text-gold transition-colors duration-200">Credentials</a>
+                    <a href="#skills" class="text-stone-300 hover:text-gold transition-colors duration-200">Arsenal</a>
+                    <a href="#projects" class="text-stone-300 hover:text-gold transition-colors duration-200">Selected Works</a>
+                    <a href="#about" class="text-stone-300 hover:text-gold transition-colors duration-200">Philosophy</a>
+                    <a href="#contact" class="px-4 py-2 rounded-sm border border-gold/35 text-gold hover:bg-gold/10 hover:border-gold transition-all duration-200">Contact</a>
                 </div>
-                <div class="lg:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none">
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 text-stone-400 hover:text-gold focus:outline-none transition-colors" aria-label="Toggle Menu">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden lg:hidden bg-surface border-t border-white/5">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-light">
-                <a href="#home" class="text-gray-300 hover:text-primary block px-3 py-2 text-base">Home</a>
-                <a href="#education" class="text-gray-300 hover:text-primary block px-3 py-2 text-base">Education</a>
-                <a href="#certifications" class="text-gray-300 hover:text-primary block px-3 py-2 text-base">Certifications</a>
-                <a href="#skills" class="text-gray-300 hover:text-primary block px-3 py-2 text-base">Skills</a>
-                <a href="#projects" class="text-gray-300 hover:text-primary block px-3 py-2 text-base">Projects</a>
-                <a href="#about" class="text-gray-300 hover:text-primary block px-3 py-2 text-base">About</a>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darker/98 border-t border-gold/15 backdrop-blur-2xl">
+            <div class="px-6 pt-4 pb-6 space-y-3 font-sans text-sm tracking-wider uppercase">
+                <a href="#home" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Home</a>
+                <a href="#education" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Education</a>
+                <a href="#certifications" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Credentials</a>
+                <a href="#skills" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Arsenal</a>
+                <a href="#projects" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Selected Works</a>
+                <a href="#about" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Philosophy</a>
+                <a href="#contact" class="mobile-nav-link text-gold font-semibold block py-2">Contact & Inquiries</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center z-10">
-            <div class="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-widest text-primary uppercase border border-primary/30 bg-primary/5 rounded-sm animate-fade-in-up">
-                Software Engineer
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-16 relative">
+        <div class="max-w-5xl mx-auto px-5 sm:px-8 flex flex-col items-center text-center z-10">
+            
+            <!-- Monogram Seal & Specialty Tag -->
+            <div class="reveal mb-6 flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full border border-gold/30 bg-surface flex items-center justify-center mb-5 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
+                    <span class="font-serif text-2xl font-bold text-gold tracking-widest">OK</span>
+                </div>
+                <div class="section-tag">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                    Software Engineer & AI Specialist
+                </div>
             </div>
-            <h1 class="text-5xl md:text-7xl font-semibold text-white mb-6 tracking-tight animate-fade-in-up" style="animation-delay: 0.1s;">
-                Omar Khaled <br class="md:hidden" />
-                <span class="text-emphasis font-normal italic tracking-normal">Mohamed Sobaih</span>
+
+            <!-- Headline -->
+            <h1 class="reveal text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-white tracking-tight leading-[1.1] mb-6">
+                Omar Khaled <br />
+                <span class="text-gold-gradient font-normal italic">Mohamed Sobaih</span>
             </h1>
-            <p class="mt-4 text-lg md:text-xl text-secondary max-w-2xl font-light leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
-                Building <strong class="text-white font-medium">intelligent software solutions</strong> and specializing in <span class="text-white font-medium">Artificial Intelligence & Machine Learning</span>.
+
+            <!-- Editorial Humanized Bio -->
+            <p class="reveal text-base sm:text-lg md:text-xl text-stone-400 max-w-3xl font-light leading-relaxed mb-10">
+                Designing <span class="text-stone-100 font-medium">intelligent software systems</span>, training robust <span class="text-gold font-medium">Machine Learning models</span>, and architecting scalable backend infrastructure. Driven by mathematical rigor and intentional craftsmanship.
             </p>
-            <div class="mt-12 flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
-                <a href="#projects" class="px-8 py-3 rounded-md bg-white text-dark font-medium hover:bg-gray-200 transition-all">View Projects</a>
-                <a href="https://github.com/OmarKhaled3125" target="_blank" class="px-8 py-3 rounded-md border border-white/20 bg-transparent hover:bg-white/5 text-white transition-all flex items-center justify-center gap-2">
-                    <i class="devicon-github-original text-xl"></i>
-                    GitHub
+
+            <!-- Call to Actions -->
+            <div class="reveal flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#projects" class="gold-btn px-8 py-3.5 rounded-sm text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+                    <span>Explore Selected Works</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </a>
+                <a href="https://github.com/OmarKhaled3125" target="_blank" class="gold-outline-btn px-8 py-3.5 rounded-sm text-sm uppercase tracking-wider flex items-center justify-center gap-2.5">
+                    <i class="devicon-github-original text-lg"></i>
+                    <span>GitHub Archive</span>
                 </a>
             </div>
+
+            <!-- Subtle Stat Strip -->
+            <div class="reveal mt-16 pt-10 border-t border-gold/15 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl w-full text-center">
+                <div>
+                    <div class="font-serif text-2xl md:text-3xl font-bold text-gold">2025</div>
+                    <div class="text-[11px] font-mono text-stone-400 tracking-wider uppercase mt-1">CS & IT Graduate</div>
+                </div>
+                <div>
+                    <div class="font-serif text-2xl md:text-3xl font-bold text-gold">AI & ML</div>
+                    <div class="text-[11px] font-mono text-stone-400 tracking-wider uppercase mt-1">Core Specialization</div>
+                </div>
+                <div>
+                    <div class="font-serif text-2xl md:text-3xl font-bold text-gold">3x</div>
+                    <div class="text-[11px] font-mono text-stone-400 tracking-wider uppercase mt-1">Industry Certifications</div>
+                </div>
+                <div>
+                    <div class="font-serif text-2xl md:text-3xl font-bold text-gold">6+</div>
+                    <div class="text-[11px] font-mono text-stone-400 tracking-wider uppercase mt-1">Engineered Systems</div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section id="education" class="py-24 relative bg-surface/30">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="reveal">
-                <h2 class="text-3xl font-light text-white mb-12 flex items-center gap-4">
-                    <span class="w-8 h-[1px] bg-primary"></span>
-                    Education
+    <!-- 01 / Academic Foundation -->
+    <section id="education" class="py-24 relative">
+        <div class="max-w-5xl mx-auto px-5 sm:px-8">
+            <div class="reveal mb-12">
+                <div class="section-tag mb-3">01 / Education & Foundation</div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+                    Academic Background
                 </h2>
-                <div class="glass-card p-8 rounded-lg border-l-2 border-l-primary flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="w-16 h-[2px] bg-gold mt-4"></div>
+            </div>
+
+            <div class="reveal luxury-card p-8 sm:p-10 rounded-sm border-l-2 border-l-gold">
+                <div class="flex flex-col lg:flex-row justify-between lg:items-center gap-6">
                     <div>
-                        <h3 class="text-xl font-medium text-white mb-1">Bachelor's Degree in Computer Science & IT</h3>
-                        <p class="text-md text-secondary font-light">The Egyptian E-Learning University</p>
+                        <div class="text-xs font-mono text-gold tracking-widest uppercase mb-1">Bachelor of Science</div>
+                        <h3 class="font-serif text-xl sm:text-2xl font-medium text-white mb-2">
+                            Computer Science & Information Technology
+                        </h3>
+                        <p class="text-stone-400 text-base font-light">
+                            The Egyptian E-Learning University (EELU)
+                        </p>
                     </div>
-                    <div class="text-right">
-                        <span class="px-4 py-2 bg-dark/50 text-primary font-mono text-sm rounded-sm border border-white/5">
-                            Class of 2025
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                        <span class="project-badge">Class of 2025</span>
+                        <span class="text-xs font-mono px-3 py-1.5 bg-dark border border-white/10 text-stone-300 rounded-sm">
+                            Cairo, Egypt
                         </span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certifications" class="py-24 relative">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="reveal">
-                <h2 class="text-3xl font-light text-white mb-12 text-center">Certifications</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    
-                    <div class="glass-card rounded-lg overflow-hidden group cursor-pointer" role="button" tabindex="0" onclick="openModal('ccnaIntro')">
-                        <div class="h-48 bg-dark relative overflow-hidden">
-                            <img src="certifications/ccna-intro.png" onerror="this.src='https://via.placeholder.com/400x300/0a0a0a/ffffff?text=CCNA+Intro'" alt="CCNA Intro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70 group-hover:opacity-100 grayscale group-hover:grayscale-0">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-medium text-white mb-2 group-hover:text-primary transition-colors">CCNA v7: Introduction to Networks</h3>
-                            <p class="text-sm text-secondary font-light">Cisco Networking Academy</p>
-                        </div>
-                    </div>
-
-                    <div class="glass-card rounded-lg overflow-hidden group cursor-pointer" role="button" tabindex="0" onclick="openModal('ccnaSwitching')">
-                        <div class="h-48 bg-dark relative overflow-hidden">
-                            <img src="certifications/ccna-switching.png" onerror="this.src='https://via.placeholder.com/400x300/0a0a0a/ffffff?text=CCNA+Switching'" alt="CCNA Switching" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70 group-hover:opacity-100 grayscale group-hover:grayscale-0">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-medium text-white mb-2 group-hover:text-primary transition-colors">CCNA v7: Switching, Routing & Wireless</h3>
-                            <p class="text-sm text-secondary font-light">Cisco Networking Academy</p>
-                        </div>
-                    </div>
-
-                    <div class="glass-card rounded-lg overflow-hidden group cursor-pointer" role="button" tabindex="0" onclick="openModal('sc900')">
-                        <div class="h-48 bg-dark relative overflow-hidden">
-                            <img src="certifications/sc-900.png" onerror="this.src='https://via.placeholder.com/400x300/0a0a0a/ffffff?text=SC-900'" alt="SC-900" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70 group-hover:opacity-100 grayscale group-hover:grayscale-0">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-medium text-white mb-2 group-hover:text-primary transition-colors">SC-900: Security, Compliance, and Identity</h3>
-                            <p class="text-sm text-secondary font-light">Microsoft</p>
-                        </div>
-                    </div>
-
+                <div class="mt-6 pt-6 border-t border-gold/10 text-sm text-stone-400 font-light leading-relaxed">
+                    Coursework and specialized research encompassing Machine Learning & Neural Networks, Data Structures & Algorithmic Complexity, Distributed Systems, Database Architecture, and Computer Network Security.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 relative bg-surface/30">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="reveal">
-                <h2 class="text-3xl font-light text-white mb-12 text-center">Technical Arsenal</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                    <!-- Applying a sleek monochrome filter to icons that reveals color on hover -->
-                    <div class="glass-card p-6 rounded-lg group">
-                        <div class="flex items-center gap-3 mb-6 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                            <i class="devicon-html5-plain text-2xl text-orange-500"></i>
-                            <i class="devicon-css3-plain text-2xl text-blue-500"></i>
-                            <i class="devicon-javascript-plain text-2xl text-yellow-400"></i>
-                            <i class="devicon-react-original text-2xl text-blue-400"></i>
-                            <h3 class="text-lg font-medium text-white ml-auto group-hover:text-primary transition-colors">Front-End</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">Tailwind.css</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React.js</span>
-                        </div>
-                    </div>
+    <!-- 02 / Credentials & Certifications -->
+    <section id="certifications" class="py-24 relative bg-darker/40">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8">
+            <div class="reveal mb-12 text-center flex flex-col items-center">
+                <div class="section-tag mb-3">02 / Verified Credentials</div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+                    Industry Certifications
+                </h2>
+                <div class="w-16 h-[2px] bg-gold mt-4 mb-3"></div>
+                <p class="text-stone-400 text-sm max-w-xl font-light">
+                    Rigorous credentials verifying core proficiencies across enterprise networking, routing protocols, and cloud identity governance.
+                </p>
+            </div>
 
-                    <div class="glass-card p-6 rounded-lg group">
-                        <div class="flex items-center gap-3 mb-6 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                            <i class="devicon-python-plain text-2xl text-blue-400"></i>
-                            <i class="devicon-django-plain text-2xl text-green-700"></i>
-                            <i class="devicon-flask-original text-2xl text-white"></i>
-                            <h3 class="text-lg font-medium text-white ml-auto group-hover:text-primary transition-colors">Backend</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Django</span>
-                            <span class="skill-tag">DRF</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">REST APIs</span>
-                            <span class="skill-tag">JWT Auth</span>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- CCNA Intro -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group cursor-pointer" onclick="openModal('ccnaIntro')">
+                    <div class="h-48 bg-dark relative overflow-hidden border-b border-gold/15">
+                        <img src="certifications/ccna-intro.png" 
+                             onerror="this.src='https://via.placeholder.com/500x350/0a0a0a/d4af37?text=CCNA+Intro'" 
+                             alt="CCNA Introduction to Networks" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 bg-darker/80 text-gold border border-gold/30 rounded-sm">
+                            Cisco
+                        </span>
                     </div>
-
-                    <div class="glass-card p-6 rounded-lg group">
-                        <div class="flex items-center gap-3 mb-6 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                            <i class="devicon-postgresql-plain text-2xl text-blue-400"></i>
-                            <i class="devicon-mysql-plain text-2xl text-blue-500"></i>
-                            <i class="devicon-sqlalchemy-plain text-2xl text-red-500"></i>
-                            <h3 class="text-lg font-medium text-white ml-auto group-hover:text-primary transition-colors">Databases</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">SQLAlchemy</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-card p-6 rounded-lg group">
-                        <div class="flex items-center gap-3 mb-6 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                            <i class="devicon-tensorflow-original text-2xl text-orange-500"></i>
-                            <i class="devicon-pytorch-original text-2xl text-red-500"></i>
-                            <h3 class="text-lg font-medium text-white ml-auto group-hover:text-primary transition-colors">AI & ML</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">Transformers</span>
-                            <span class="skill-tag">RAG</span>
-                            <span class="skill-tag">LoRA</span>
-                            <span class="skill-tag">NLP</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-card p-6 rounded-lg group">
-                        <div class="flex items-center gap-3 mb-6 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                            <i class="devicon-azure-plain text-2xl text-blue-500"></i>
-                            <h3 class="text-lg font-medium text-white ml-auto group-hover:text-primary transition-colors">IT & Net</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">Cisco IOS</span>
-                            <span class="skill-tag">Packet Tracer</span>
-                            <span class="skill-tag">TCP/IP & VLANs</span>
-                            <span class="skill-tag">Azure Security</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-card p-6 rounded-lg group">
-                        <div class="flex items-center gap-3 mb-6 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                            <i class="devicon-git-plain text-2xl text-red-400"></i>
-                            <i class="devicon-vscode-plain text-2xl text-blue-500"></i>
-                            <i class="devicon-postman-plain text-2xl text-orange-600"></i>
-                            <h3 class="text-lg font-medium text-white ml-auto group-hover:text-primary transition-colors">Tools</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag">Git / GitHub</span>
-                            <span class="skill-tag">Postman</span>
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">OpenGL</span>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-white mb-2 group-hover:text-gold transition-colors">
+                            CCNA v7: Intro to Networks
+                        </h3>
+                        <p class="text-xs text-stone-400 font-light mb-4">
+                            Cisco Networking Academy &bull; Network architectures, IPv4/IPv6 subnetting, ethernet operations, and transport layer security.
+                        </p>
+                        <div class="flex items-center gap-2 text-xs font-mono text-gold group-hover:translate-x-1 transition-transform">
+                            <span>Inspect Credential</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </div>
                     </div>
                 </div>
+
+                <!-- CCNA Switching -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group cursor-pointer" onclick="openModal('ccnaSwitching')" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-dark relative overflow-hidden border-b border-gold/15">
+                        <img src="certifications/ccna-switching.png" 
+                             onerror="this.src='https://via.placeholder.com/500x350/0a0a0a/d4af37?text=CCNA+Switching'" 
+                             alt="CCNA Switching Routing and Wireless" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 bg-darker/80 text-gold border border-gold/30 rounded-sm">
+                            Cisco
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-white mb-2 group-hover:text-gold transition-colors">
+                            CCNA v7: Switching & Wireless
+                        </h3>
+                        <p class="text-xs text-stone-400 font-light mb-4">
+                            Cisco Networking Academy &bull; VLAN architectures, inter-VLAN routing, Spanning Tree Protocol (STP), EtherChannel, and WLAN security.
+                        </p>
+                        <div class="flex items-center gap-2 text-xs font-mono text-gold group-hover:translate-x-1 transition-transform">
+                            <span>Inspect Credential</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SC-900 -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group cursor-pointer" onclick="openModal('sc900')" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-dark relative overflow-hidden border-b border-gold/15">
+                        <img src="certifications/sc-900.png" 
+                             onerror="this.src='https://via.placeholder.com/500x350/0a0a0a/d4af37?text=SC-900'" 
+                             alt="Microsoft SC-900" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 bg-darker/80 text-gold border border-gold/30 rounded-sm">
+                            Microsoft
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-lg font-medium text-white mb-2 group-hover:text-gold transition-colors">
+                            Microsoft SC-900: Security
+                        </h3>
+                        <p class="text-xs text-stone-400 font-light mb-4">
+                            Microsoft &bull; Cloud security compliance, Microsoft Entra ID management, Zero-Trust fundamentals, and enterprise threat protection.
+                        </p>
+                        <div class="flex items-center gap-2 text-xs font-mono text-gold group-hover:translate-x-1 transition-transform">
+                            <span>Inspect Credential</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Projects Section: Removed the colorful gradients at the top of cards, utilizing subtle borders and layout for structure -->
-    <section id="projects" class="py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-light text-white mb-12 text-center">Featured Projects</h2>
-            
+    <!-- 03 / Technical Arsenal -->
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8">
+            <div class="reveal mb-12 text-center flex flex-col items-center">
+                <div class="section-tag mb-3">03 / Core Competencies</div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+                    Technical Capabilities
+                </h2>
+                <div class="w-16 h-[2px] bg-gold mt-4 mb-3"></div>
+                <p class="text-stone-400 text-sm max-w-xl font-light">
+                    A curated technical stack honed through hands-on system building, theoretical research, and architectural design.
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
+                <!-- AI & ML -->
+                <div class="reveal luxury-card p-7 rounded-sm group">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center gap-3 text-gold">
+                            <i class="devicon-tensorflow-original text-2xl"></i>
+                            <i class="devicon-pytorch-original text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
+                            AI & Deep Learning
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-400 font-light mb-5">
+                        Developing neural architectures, fine-tuning language models, and designing retrieval pipelines.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">LoRA</span>
+                        <span class="skill-tag">NLP</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 50ms;">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center gap-3 text-gold">
+                            <i class="devicon-python-plain text-2xl"></i>
+                            <i class="devicon-django-plain text-2xl"></i>
+                            <i class="devicon-flask-original text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
+                            Backend Engineering
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-400 font-light mb-5">
+                        Architecting high-throughput REST APIs, authentication security, and modular microservices.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">DRF</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">JWT Auth</span>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 100ms;">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center gap-3 text-gold">
+                            <i class="devicon-react-original text-2xl"></i>
+                            <i class="devicon-javascript-plain text-2xl"></i>
+                            <i class="devicon-tailwindcss-plain text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
+                            Modern Front-End
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-400 font-light mb-5">
+                        Crafting interactive, highly responsive client interfaces with clean state management.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">HTML5 / Modern CSS</span>
+                        <span class="skill-tag">React Flow</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 150ms;">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center gap-3 text-gold">
+                            <i class="devicon-postgresql-plain text-2xl"></i>
+                            <i class="devicon-mysql-plain text-2xl"></i>
+                            <i class="devicon-sqlite-plain text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
+                            Databases & Storage
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-400 font-light mb-5">
+                        Relational schema modeling, query performance tuning, ORM mapping, and vector storage.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">SQLAlchemy</span>
+                        <span class="skill-tag">ChromaDB</span>
+                    </div>
+                </div>
+
+                <!-- Systems & Networking -->
+                <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 200ms;">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center gap-3 text-gold">
+                            <i class="devicon-azure-plain text-2xl"></i>
+                            <i class="devicon-linux-plain text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
+                            Networking & Systems
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-400 font-light mb-5">
+                        Enterprise routing & switching, network topology design, and cloud infrastructure security.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Cisco IOS</span>
+                        <span class="skill-tag">TCP/IP Protocols</span>
+                        <span class="skill-tag">VLANs & Routing</span>
+                        <span class="skill-tag">Packet Tracer</span>
+                        <span class="skill-tag">Azure Security</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Environment -->
+                <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 250ms;">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center gap-3 text-gold">
+                            <i class="devicon-git-plain text-2xl"></i>
+                            <i class="devicon-vscode-plain text-2xl"></i>
+                            <i class="devicon-postman-plain text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
+                            Tools & Workflow
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-400 font-light mb-5">
+                        Version control discipline, automated API testing suites, and graphical render pipelines.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">OpenGL</span>
+                        <span class="skill-tag">Bash / Linux</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 / Selected Works -->
+    <section id="projects" class="py-24 relative bg-darker/40">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="reveal mb-12 text-center flex flex-col items-center">
+                <div class="section-tag mb-3">04 / Selected Works</div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+                    Featured Systems & Projects
+                </h2>
+                <div class="w-16 h-[2px] bg-gold mt-4 mb-3"></div>
+                <p class="text-stone-400 text-sm max-w-2xl font-light">
+                    Production systems, research implementations, and deep-learning architectures built to address complex computational challenges.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                
                 <!-- LinguaZone -->
-                <div class="glass-card rounded-lg overflow-hidden group reveal relative">
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <h3 class="text-lg font-medium text-white group-hover:text-primary transition-colors">LinguaZone</h3>
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                LinguaZone
+                            </h3>
                             <span class="project-badge">Full-Stack & AI</span>
                         </div>
-                        <p class="text-secondary text-sm mb-8 leading-relaxed font-light">
-                            Full-stack edtech platform utilizing AI for personalized education. Features DeepSpeech for speech-to-text and BART for grammar correction.
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            An intelligent language educational ecosystem combining speech processing and deep NLP. Employs Mozilla DeepSpeech for real-time speech-to-text and fine-tuned BART models for grammatical error detection and contextual correction.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">React.js</span>
                             <span class="tech-tag">Tailwind CSS</span>
                             <span class="tech-tag">Flutter</span>
                             <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">BART / NLP</span>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto">
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/0158-Graduation-Project" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-lg"></i> Code
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code Repository</span>
                             </a>
                             <button onclick="openDocumentModal('linguazone')" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                Docs
+                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                <span>Documentation</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Aether -->
-                <div class="glass-card rounded-lg overflow-hidden group reveal" style="transition-delay: 100ms;">
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <h3 class="text-lg font-medium text-white group-hover:text-primary transition-colors">Aether</h3>
-                            <span class="project-badge">Architecture</span>
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Aether
+                            </h3>
+                            <span class="project-badge">Cognitive Twin</span>
                         </div>
-                        <p class="text-secondary text-sm mb-8 leading-relaxed font-light">
-                            A software system designed to preserve and simulate human consciousness, creating a "Digital Twin" that reasons and recalls memories with high fidelity.
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            A cognitive simulation architecture designed to model and simulate individual persona memory. Integrates Retrieval-Augmented Generation (RAG) with LoRA fine-tuned language models to recall, reason, and converse with high psychological fidelity.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">FastAPI</span>
                             <span class="tech-tag">RAG</span>
                             <span class="tech-tag">LoRA</span>
                             <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">ChromaDB</span>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto flex-wrap">
+                        <div class="flex items-center gap-5 pt-5 border-t border-gold/15 flex-wrap">
                             <a href="https://github.com/OmarKhaled3125/Aether.git" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-lg"></i> Code
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
                             </a>
                             <button onclick="openDocumentModal('aether')" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                Docs
+                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                <span>Docs</span>
                             </button>
-                            <button onclick="openModal('aether')" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
-                                UI
+                            <button onclick="openModal('aether')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <span>Gallery (5)</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Cerno -->
-                <div class="glass-card rounded-lg overflow-hidden group reveal" style="transition-delay: 200ms;">
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <h3 class="text-lg font-medium text-white group-hover:text-primary transition-colors">Cerno</h3>
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 200ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Cerno
+                            </h3>
                             <span class="project-badge">DSS Platform</span>
                         </div>
-                        <p class="text-secondary text-sm mb-8 leading-relaxed font-light">
-                            An AI-powered Decision Support System (DSS) designed to parse complex situations and project multiple decision paths with calculated success probabilities.
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            An intelligent Decision Support System (DSS) engineered to evaluate multi-variable decision pathways. Computes probabilistic outcomes, dynamic risk factors, and optimal strategic recommendations through an intuitive analytics interface.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">FastAPI</span>
                             <span class="tech-tag">Django</span>
                             <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto">
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/Cerno-Decision-Support-System.git" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-lg"></i> Code
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code Repository</span>
                             </a>
-                            <button onclick="openModal('cerno')" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
-                                Screens
+                            <button onclick="openModal('cerno')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <span>Screenshots (3)</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- NexusRate Dashboard -->
-                <div class="glass-card rounded-lg overflow-hidden group reveal">
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <h3 class="text-lg font-medium text-white group-hover:text-primary transition-colors">NexusRate</h3>
-                            <span class="project-badge">FinTech</span>
+                <!-- NexusRate -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                NexusRate
+                            </h3>
+                            <span class="project-badge">FinTech Analytics</span>
                         </div>
-                        <p class="text-secondary text-sm mb-8 leading-relaxed font-light">
-                            Real-time dashboard for live market analytics, visualizing currency exchange rates and trends with interactive charts.
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            High-throughput market analytics dashboard delivering real-time currency exchange rates, historical trend regression, and low-latency financial telemetry with interactive data visualization.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">React.js</span>
                             <span class="tech-tag">Django</span>
-                            <span class="tech-tag">PostgresSQL</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Chart.js</span>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto">
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/NexusRate-Dashboard-for-Live-Market-Analytics.git" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-lg"></i> Code
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code Repository</span>
                             </a>
-                            <button onclick="openModal('nexusRate')" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
-                                View
+                            <button onclick="openModal('nexusRate')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <span>Live UI Preview</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Chatbot Assistant -->
-                <div class="glass-card rounded-lg overflow-hidden group reveal" style="transition-delay: 100ms;">
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <h3 class="text-lg font-medium text-white group-hover:text-primary transition-colors">Chatbot Assistant</h3>
-                            <span class="project-badge">LLM</span>
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Chatbot Assistant
+                            </h3>
+                            <span class="project-badge">Transformer LLM</span>
                         </div>
-                        <p class="text-secondary text-sm mb-8 leading-relaxed font-light">
-                            A conversational AI utilizing Hugging Face Transformers (DialoGPT-medium). Handles multi-turn conversations with context memory.
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            A multi-turn conversational AI system built on Hugging Face Transformers utilizing DialoGPT-medium. Implements dynamic conversational context caching and state tracking for coherent multi-stage dialogues.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">Transformers</span>
                             <span class="tech-tag">DialoGPT</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Python NLP</span>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto">
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/Chatbot_Assistant" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-lg"></i> Code
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code Repository</span>
                             </a>
-                            <button onclick="openModal('chatbotAssistant')" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
-                                UI
+                            <button onclick="openModal('chatbotAssistant')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <span>Interface View</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sentry -->
-                <div class="glass-card rounded-lg overflow-hidden group reveal" style="transition-delay: 200ms;">
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <h3 class="text-lg font-medium text-white group-hover:text-primary transition-colors">Sentry</h3>
-                            <span class="project-badge">Forensics</span>
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 200ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Sentry
+                            </h3>
+                            <span class="project-badge">Execution Forensics</span>
                         </div>
-                        <p class="text-secondary text-sm mb-8 leading-relaxed font-light">
-                            A trace failure forensics & pipeline architecture tool helping engineers inspect and debug execution traces visually.
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            A forensic analysis and telemetry tool designed for distributed pipeline debugging. Enables engineers to visually inspect execution traces, identify failure propagation bottlenecks, and diagnose anomalous state transitions.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">React Flow</span>
                             <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Trace Analysis</span>
                         </div>
-                        <div class="flex items-center gap-6 mt-auto">
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/Sentry" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-lg"></i> Code
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code Repository</span>
                             </a>
-                            <button onclick="openModal('sentry')" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
-                                Tool UI
+                            <button onclick="openModal('sentry')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <span>Trace Gallery (5)</span>
                             </button>
                         </div>
                     </div>
@@ -554,94 +896,429 @@
         </div>
     </section>
 
-    <section id="about" class="py-24 relative bg-surface/30">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="reveal">
-                <h2 class="text-3xl font-light text-white mb-8 flex items-center gap-4">
-                    <span class="w-8 h-[1px] bg-primary"></span>
-                    Professional Profile
+    <!-- 05 / Engineering Philosophy & Profile -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-5 sm:px-8">
+            <div class="reveal mb-12">
+                <div class="section-tag mb-3">05 / Perspective & Philosophy</div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
+                    Engineering Profile
                 </h2>
-                <div class="glass-card rounded-lg p-10">
-                    <p class="text-lg leading-relaxed text-secondary font-light">
-                        Recent graduate with foundational knowledge in full-stack development and artificial intelligence, coupled with hands-on experience gained through academic projects and systems architecture. Demonstrates a strong commitment to establishing a career focused on producing highly functional, robust code and delivering meaningful technical contributions.
+                <div class="w-16 h-[2px] bg-gold mt-4"></div>
+            </div>
+
+            <div class="reveal luxury-card rounded-sm p-8 sm:p-12 border-l-2 border-l-gold">
+                <div class="space-y-6 text-base sm:text-lg leading-relaxed text-stone-300 font-light">
+                    <p>
+                        I approach software engineering as the intersection of rigorous mathematical thinking and deliberate system craftsmanship. Graduating in 2025 with a Bachelor of Science in Computer Science & IT, my focus has been centered on building intelligent systems where artificial intelligence operates harmoniously alongside robust backend architecture.
                     </p>
+                    <p>
+                        Rather than treating modern machine learning as a black box, I prioritize understanding the core mechanics — from transformer attention weights and retrieval indexing to distributed consensus and relational query optimization.
+                    </p>
+                </div>
+
+                <!-- Engineering Principles Grid -->
+                <div class="mt-10 pt-8 border-t border-gold/15 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-4 bg-dark/60 rounded-sm border border-gold/10">
+                        <div class="font-serif text-sm font-semibold text-gold mb-1">01 &bull; Architectural Clarity</div>
+                        <p class="text-xs text-stone-400 font-light leading-relaxed">
+                            Decoupled services, strict type boundaries, and self-documenting code over clever hacks.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-dark/60 rounded-sm border border-gold/10">
+                        <div class="font-serif text-sm font-semibold text-gold mb-1">02 &bull; Algorithmic Depth</div>
+                        <p class="text-xs text-stone-400 font-light leading-relaxed">
+                            Thorough comprehension of loss surfaces, model limits, and data distribution drift.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-dark/60 rounded-sm border border-gold/10">
+                        <div class="font-serif text-sm font-semibold text-gold mb-1">03 &bull; Production Reliability</div>
+                        <p class="text-xs text-stone-400 font-light leading-relaxed">
+                            Defensive validation, structured telemetry, graceful fallbacks, and deterministic states.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-dark border-t border-white/5 pt-20 pb-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-light text-white mb-10">Let's Connect</h2>
+    <!-- 06 / Contact & Footer -->
+    <footer id="contact" class="bg-darker border-t border-gold/20 pt-24 pb-14">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8 text-center">
             
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-16">
-                <a href="mailto:omarkd1250@gmail.com" class="flex items-center gap-3 px-6 py-3 rounded-md bg-surface hover:bg-surfaceHover text-secondary hover:text-white transition-all border border-white/5">
-                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    <span class="text-sm">omarkd1250@gmail.com</span>
-                </a>
-                <a href="tel:01044244108" class="flex items-center gap-3 px-6 py-3 rounded-md bg-surface hover:bg-surfaceHover text-secondary hover:text-white transition-all border border-white/5">
-                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    <span class="text-sm">01044244108</span>
-                </a>
-                <a href="https://linkedin.com/in/omarkhaled3125" target="_blank" class="flex items-center gap-3 px-6 py-3 rounded-md bg-surface hover:bg-surfaceHover text-secondary hover:text-white transition-all border border-white/5">
-                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    <span class="text-sm">LinkedIn</span>
-                </a>
+            <div class="reveal mb-14 flex flex-col items-center">
+                <div class="section-tag mb-3">06 / Connect & Inquiries</div>
+                <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-white tracking-tight mb-4">
+                    Initiate a Conversation
+                </h2>
+                <div class="w-16 h-[2px] bg-gold mb-6"></div>
+                <p class="text-stone-400 text-sm sm:text-base max-w-xl font-light leading-relaxed">
+                    Available for software engineering appointments, AI research collaborations, and ambitious technical projects.
+                </p>
             </div>
             
-            <p class="text-secondary text-xs font-light">
-                &copy; 2026 Omar Khaled. Crafted with precision.
+            <!-- Contact Channels Grid -->
+            <div class="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16 max-w-5xl mx-auto">
+                
+                <!-- Email -->
+                <a href="mailto:omarkd1250@gmail.com" class="luxury-card p-6 rounded-sm flex flex-col items-center justify-center text-center group">
+                    <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center mb-4 text-gold group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <span class="text-xs font-mono text-stone-400 uppercase tracking-wider mb-1">Email Direct</span>
+                    <span class="text-sm font-medium text-white group-hover:text-gold transition-colors break-all">omarkd1250@gmail.com</span>
+                </a>
+
+                <!-- Phone -->
+                <a href="tel:01044244108" class="luxury-card p-6 rounded-sm flex flex-col items-center justify-center text-center group">
+                    <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center mb-4 text-gold group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </div>
+                    <span class="text-xs font-mono text-stone-400 uppercase tracking-wider mb-1">Phone / WhatsApp</span>
+                    <span class="text-sm font-medium text-white group-hover:text-gold transition-colors">+20 1044244108</span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/omarkhaled3125" target="_blank" class="luxury-card p-6 rounded-sm flex flex-col items-center justify-center text-center group">
+                    <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center mb-4 text-gold group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </div>
+                    <span class="text-xs font-mono text-stone-400 uppercase tracking-wider mb-1">Professional</span>
+                    <span class="text-sm font-medium text-white group-hover:text-gold transition-colors">LinkedIn Profile</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/OmarKhaled3125" target="_blank" class="luxury-card p-6 rounded-sm flex flex-col items-center justify-center text-center group">
+                    <div class="w-12 h-12 rounded-full border border-gold/30 bg-gold/5 flex items-center justify-center mb-4 text-gold group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all">
+                        <i class="devicon-github-original text-2xl"></i>
+                    </div>
+                    <span class="text-xs font-mono text-stone-400 uppercase tracking-wider mb-1">Source Code</span>
+                    <span class="text-sm font-medium text-white group-hover:text-gold transition-colors">GitHub Repositories</span>
+                </a>
+
+            </div>
+            
+            <div class="gold-hairline max-w-xl mx-auto mb-8"></div>
+
+            <p class="text-stone-400 text-xs font-mono tracking-wider">
+                &copy; 2026 Omar Khaled Mohamed Sobaih. Designed & engineered with deliberate craftsmanship.
             </p>
         </div>
     </footer>
 
-    <!-- Modal structure remains identical logically, only visual styling updated -->
-    <!-- (Retained your exact JS configuration and script block from original) -->
-    <!-- Modal Structure (Supports Image & Video) -->
-    <div id="screenshot-modal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300">
+    <!-- Interactive Universal Modal (Images, PDFs & Videos) -->
+    <div id="screenshot-modal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300 flex items-center justify-center">
         <!-- Backdrop -->
-        <div class="absolute inset-0 bg-dark/95 backdrop-blur-md" onclick="closeModal()"></div>
+        <div class="absolute inset-0 bg-darker/95 backdrop-blur-xl" onclick="closeModal()"></div>
         
-        <!-- Modal Content -->
-        <div class="relative z-10 w-full h-full flex flex-col items-center justify-center p-4">
-            <!-- Close Button -->
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-secondary hover:text-white transition-colors">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-
-            <!-- Media Container -->
-            <div class="relative max-w-6xl w-full h-[80vh] flex items-center justify-center">
-                <button id="modal-prev-btn" onclick="changeSlide(-1)" class="absolute left-0 md:-left-12 p-2 text-secondary hover:text-white hover:bg-white/5 rounded-md transition-all z-20">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
-                </button>
-
-                <div class="flex justify-center items-center w-full h-full">
-                    <img id="modal-image" src="" alt="Project Screenshot" class="hidden max-h-full max-w-full rounded-md shadow-2xl border border-white/5 object-contain">
-                    <video id="modal-video" controls class="hidden max-h-full max-w-full rounded-md shadow-2xl border border-white/5 bg-dark">
-                        <source src="" type="video/mp4">
-                    </video>
-                    <iframe id="modal-pdf" class="hidden w-full h-full rounded-md shadow-2xl border border-white/5 bg-white" src=""></iframe>
+        <!-- Modal Content Container -->
+        <div class="relative z-10 w-full h-full flex flex-col items-center justify-between p-4 sm:p-8 max-w-7xl mx-auto pointer-events-none">
+            
+            <!-- Top Bar: Title, Counter & Action Controls -->
+            <div class="w-full flex items-center justify-between pointer-events-auto mb-3 bg-surface/80 border border-gold/20 backdrop-blur-md px-6 py-3.5 rounded-sm">
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-gold"></span>
+                    <h4 id="modal-title" class="font-serif text-sm sm:text-base font-semibold text-white tracking-wide truncate max-w-[200px] sm:max-w-md">
+                        Project Media Viewer
+                    </h4>
                 </div>
 
-                <button id="modal-next-btn" onclick="changeSlide(1)" class="absolute right-0 md:-right-12 p-2 text-secondary hover:text-white hover:bg-white/5 rounded-md transition-all z-20">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
+                <div class="flex items-center gap-4">
+                    <span id="modal-counter" class="text-xs font-mono text-gold px-2.5 py-1 bg-darker border border-gold/20 rounded-sm">
+                        1 / 1
+                    </span>
+                    <a id="modal-download" href="" download class="hidden text-xs font-mono text-stone-300 hover:text-white px-3 py-1 bg-gold/10 hover:bg-gold/20 border border-gold/30 rounded-sm transition-all flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        <span>Download</span>
+                    </a>
+                    <button onclick="closeModal()" class="text-stone-400 hover:text-white p-1 rounded-sm hover:bg-white/10 transition-colors" aria-label="Close Modal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Central Media Viewer Container -->
+            <div class="relative w-full flex-1 flex items-center justify-center overflow-hidden pointer-events-auto">
+                <!-- Previous Button -->
+                <button id="modal-prev-btn" onclick="changeSlide(-1)" class="absolute left-2 sm:left-4 z-20 p-3 text-stone-300 hover:text-white bg-darker/80 hover:bg-gold/20 border border-gold/25 rounded-full transition-all duration-200 focus:outline-none shadow-lg" aria-label="Previous Slide">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <!-- Media Elements -->
+                <div class="flex justify-center items-center w-full h-full max-h-[78vh]">
+                    <img id="modal-image" src="" alt="Project Preview" class="hidden max-h-full max-w-full rounded-sm shadow-2xl border border-gold/20 object-contain transition-all duration-300">
+                    <video id="modal-video" controls class="hidden max-h-full max-w-full rounded-sm shadow-2xl border border-gold/20 bg-darker">
+                        <source src="" type="video/mp4">
+                    </video>
+                    <iframe id="modal-pdf" class="hidden w-full h-full rounded-sm shadow-2xl border border-gold/20 bg-darker" src=""></iframe>
+                </div>
+
+                <!-- Next Button -->
+                <button id="modal-next-btn" onclick="changeSlide(1)" class="absolute right-2 sm:right-4 z-20 p-3 text-stone-300 hover:text-white bg-darker/80 hover:bg-gold/20 border border-gold/25 rounded-full transition-all duration-200 focus:outline-none shadow-lg" aria-label="Next Slide">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
             </div>
 
-            <!-- Caption/Counter -->
-            <div class="mt-4 flex flex-col items-center gap-3 text-secondary font-mono text-sm">
-                <span id="modal-counter">1 / 1</span>
-                <a id="modal-download" href="" download class="hidden px-4 py-2 border border-white/10 rounded-md hover:bg-white/5 text-white transition-all">
-                    Download File
-                </a>
+            <!-- Footer Hint -->
+            <div class="mt-3 text-stone-400 text-xs font-mono pointer-events-auto text-center">
+                Press <kbd class="px-2 py-0.5 bg-darker border border-gold/20 rounded text-gold text-[10px]">Esc</kbd> to close &bull; Use <kbd class="px-2 py-0.5 bg-darker border border-gold/20 rounded text-gold text-[10px]">&larr;</kbd> <kbd class="px-2 py-0.5 bg-darker border border-gold/20 rounded text-gold text-[10px]">&rarr;</kbd> keys to navigate
             </div>
+
         </div>
     </div>
 
-    <!-- Script Block omitted for brevity (Keep exact original JS logic here) -->
+    <!-- Complete Interactive JavaScript Suite -->
     <script>
-        // Use exact same script tag content as original file
-        // ... (Modal arrays & toggle logic)
+        // Media Registry for Interactive Showcases
+        const projectMediaRegistry = {
+            ccnaIntro: {
+                title: "Cisco CCNA: Introduction to Networks",
+                type: "image",
+                items: ["certifications/ccna-intro.png"],
+                download: "certifications/ccna-intro.png"
+            },
+            ccnaSwitching: {
+                title: "Cisco CCNA: Switching, Routing & Wireless",
+                type: "image",
+                items: ["certifications/ccna-switching.png"],
+                download: "certifications/ccna-switching.png"
+            },
+            sc900: {
+                title: "Microsoft Certified: SC-900 Security Fundamentals",
+                type: "image",
+                items: ["certifications/sc-900.png"],
+                download: "certifications/sc-900.png"
+            },
+            linguazone: {
+                title: "LinguaZone — Architectural Specification",
+                type: "pdf",
+                items: ["documentations/linguazone.pdf"],
+                download: "documentations/linguazone.pdf"
+            },
+            aether: {
+                title: "Aether — Neural Interface & Consciousness Bank",
+                type: "image",
+                items: [
+                    "Screenshots/Aether/1- Main interface.png",
+                    "Screenshots/Aether/2- Memory bank.png",
+                    "Screenshots/Aether/3- Memory deletion.png",
+                    "Screenshots/Aether/4- Neural interface loading.png",
+                    "Screenshots/Aether/5- Neural interface.png"
+                ],
+                download: "Screenshots/Aether/1- Main interface.png"
+            },
+            aetherDoc: {
+                title: "Aether — System Architecture & Design Documentation",
+                type: "pdf",
+                items: ["documentations/aether.pdf"],
+                download: "documentations/aether.pdf"
+            },
+            cerno: {
+                title: "Cerno — Decision Support System Interface",
+                type: "image",
+                items: [
+                    "Screenshots/Cerno/Main.png",
+                    "Screenshots/Cerno/Map.png",
+                    "Screenshots/Cerno/Sign in.png"
+                ],
+                download: "Screenshots/Cerno/Main.png"
+            },
+            nexusRate: {
+                title: "NexusRate — Live Currency Analytics Dashboard",
+                type: "image",
+                items: [
+                    "Screenshots/NexusRate/NexusRate.png"
+                ],
+                download: "Screenshots/NexusRate/NexusRate.png"
+            },
+            chatbotAssistant: {
+                title: "Chatbot Assistant — Conversational Agent Dialogue",
+                type: "image",
+                items: [
+                    "Screenshots/Chatbot Assistant/Chat.png"
+                ],
+                download: "Screenshots/Chatbot Assistant/Chat.png"
+            },
+            sentry: {
+                title: "Sentry — Trace Failure Forensics Visualization",
+                type: "image",
+                items: [
+                    "Screenshots/Sentry/1.png",
+                    "Screenshots/Sentry/2.png",
+                    "Screenshots/Sentry/3.png",
+                    "Screenshots/Sentry/4.png",
+                    "Screenshots/Sentry/5.png"
+                ],
+                download: "Screenshots/Sentry/1.png"
+            }
+        };
+
+        // Modal State Controller
+        let currentItemKey = null;
+        let currentSlideIndex = 0;
+
+        const modal = document.getElementById('screenshot-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalCounter = document.getElementById('modal-counter');
+        const modalDownload = document.getElementById('modal-download');
+        const modalImage = document.getElementById('modal-image');
+        const modalVideo = document.getElementById('modal-video');
+        const modalPdf = document.getElementById('modal-pdf');
+        const prevBtn = document.getElementById('modal-prev-btn');
+        const nextBtn = document.getElementById('modal-next-btn');
+
+        function openModal(key) {
+            const data = projectMediaRegistry[key];
+            if (!data) return;
+
+            currentItemKey = key;
+            currentSlideIndex = 0;
+            modalTitle.textContent = data.title;
+
+            // Display modal with smooth opacity
+            modal.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                modal.classList.remove('opacity-0');
+            });
+            document.body.style.overflow = 'hidden';
+
+            renderCurrentSlide();
+        }
+
+        function openDocumentModal(key) {
+            if (key === 'linguazone') {
+                openModal('linguazone');
+            } else if (key === 'aether') {
+                openModal('aetherDoc');
+            } else {
+                openModal(key);
+            }
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImage.src = '';
+                modalVideo.src = '';
+                modalPdf.src = '';
+                modalImage.classList.add('hidden');
+                modalVideo.classList.add('hidden');
+                modalPdf.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        function renderCurrentSlide() {
+            const data = projectMediaRegistry[currentItemKey];
+            if (!data) return;
+
+            const total = data.items.length;
+            modalCounter.textContent = `${currentSlideIndex + 1} / ${total}`;
+
+            // Handle navigation button visibility
+            if (total > 1) {
+                prevBtn.classList.remove('hidden');
+                nextBtn.classList.remove('hidden');
+            } else {
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+            }
+
+            // Handle download button
+            const currentItemUrl = data.items[currentSlideIndex];
+            if (data.download || currentItemUrl) {
+                modalDownload.href = encodeURI(currentItemUrl);
+                modalDownload.setAttribute('download', currentItemUrl.split('/').pop());
+                modalDownload.classList.remove('hidden');
+            } else {
+                modalDownload.classList.add('hidden');
+            }
+
+            // Hide all media elements first
+            modalImage.classList.add('hidden');
+            modalVideo.classList.add('hidden');
+            modalPdf.classList.add('hidden');
+
+            if (data.type === 'image') {
+                modalImage.src = encodeURI(currentItemUrl);
+                modalImage.classList.remove('hidden');
+            } else if (data.type === 'video') {
+                modalVideo.src = encodeURI(currentItemUrl);
+                modalVideo.classList.remove('hidden');
+                modalVideo.load();
+            } else if (data.type === 'pdf') {
+                modalPdf.src = encodeURI(currentItemUrl);
+                modalPdf.classList.remove('hidden');
+            }
+        }
+
+        function changeSlide(direction) {
+            const data = projectMediaRegistry[currentItemKey];
+            if (!data || data.items.length <= 1) return;
+
+            currentSlideIndex = (currentSlideIndex + direction + data.items.length) % data.items.length;
+            renderCurrentSlide();
+        }
+
+        // Global Keyboard Event Listeners for Modal
+        window.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('hidden')) return;
+
+            if (e.key === 'Escape') {
+                closeModal();
+            } else if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeSlide(1);
+            }
+        });
+
+        // Mobile Menu Toggle with Smooth Drawer Animation
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Navbar Scroll Border and Backdrop Sheen
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll-Triggered Reveal Animations using IntersectionObserver
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
     </script>
 </body>
 </html>
