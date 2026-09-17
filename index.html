@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Khaled Mohamed Sobaih | Software Engineer & AI Specialist</title>
+    <title>Omar Khaled Mohamed Sobaih | Software Engineer</title>
     
     <link rel="icon" href="favicon/favicon.ico" sizes="any">
     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
     
-    <!-- Premium Editorial Typography: Cinzel (Luxury Roman Serif) + Plus Jakarta Sans (Humanist Sans) + JetBrains Mono -->
+    <!-- Premium Editorial Typography: Cinzel + Plus Jakarta Sans + JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -160,22 +160,6 @@
             transform: translateY(-1px);
         }
 
-        /* Refined Editorial Section Badge */
-        .section-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: #D4AF37;
-            padding: 0.35rem 0.85rem;
-            background: rgba(212, 175, 55, 0.06);
-            border: 1px solid rgba(212, 175, 55, 0.22);
-            border-radius: 2px;
-        }
-
         /* Project Badge */
         .project-badge {
             font-size: 0.7rem;
@@ -274,17 +258,15 @@
     <nav class="fixed w-full z-50 glass-nav" id="navbar">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <div class="flex items-center justify-between h-20">
-                <!-- Brand Seal / Monogram -->
-                <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-gold/5 group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(212,175,55,0.35)] transition-all duration-300">
-                        <span class="font-serif font-bold text-sm tracking-wider text-gold">OK</span>
-                    </div>
+                <!-- Top-Left Brand Logo matching favicon -->
+                <a href="#home" class="flex items-center gap-3.5 group">
+                    <img src="favicon/favicon.svg" alt="Omar Khaled" class="w-8 h-8 rounded-sm object-contain border border-gold/30 p-0.5 group-hover:border-gold transition-colors">
                     <div class="flex flex-col">
                         <span class="font-serif font-bold text-base tracking-widest text-stone-100 group-hover:text-gold transition-colors">
                             OMAR KHALED
                         </span>
                         <span class="text-[9px] font-mono tracking-[0.25em] text-stone-400 uppercase">
-                            AI & Software Eng.
+                            Software Engineer
                         </span>
                     </div>
                 </a>
@@ -293,11 +275,11 @@
                 <div class="hidden md:flex items-center space-x-8 font-sans text-xs tracking-wider uppercase font-medium">
                     <a href="#home" class="text-stone-300 hover:text-gold transition-colors duration-200">Home</a>
                     <a href="#education" class="text-stone-300 hover:text-gold transition-colors duration-200">Education</a>
-                    <a href="#certifications" class="text-stone-300 hover:text-gold transition-colors duration-200">Credentials</a>
-                    <a href="#skills" class="text-stone-300 hover:text-gold transition-colors duration-200">Arsenal</a>
-                    <a href="#projects" class="text-stone-300 hover:text-gold transition-colors duration-200">Selected Works</a>
-                    <a href="#about" class="text-stone-300 hover:text-gold transition-colors duration-200">Philosophy</a>
-                    <a href="#contact" class="px-4 py-2 rounded-sm border border-gold/35 text-gold hover:bg-gold/10 hover:border-gold transition-all duration-200">Contact</a>
+                    <a href="#certifications" class="text-stone-300 hover:text-gold transition-colors duration-200">Certifications</a>
+                    <a href="#skills" class="text-stone-300 hover:text-gold transition-colors duration-200">Technical Skills</a>
+                    <a href="#projects" class="text-stone-300 hover:text-gold transition-colors duration-200">Projects</a>
+                    <a href="#about" class="text-stone-300 hover:text-gold transition-colors duration-200">Summary</a>
+                    <a href="#contact" class="px-4 py-2 rounded-sm border border-gold/35 text-gold hover:bg-gold/10 hover:border-gold transition-all duration-200">Contact us</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -316,11 +298,11 @@
             <div class="px-6 pt-4 pb-6 space-y-3 font-sans text-sm tracking-wider uppercase">
                 <a href="#home" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Home</a>
                 <a href="#education" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Education</a>
-                <a href="#certifications" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Credentials</a>
-                <a href="#skills" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Arsenal</a>
-                <a href="#projects" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Selected Works</a>
-                <a href="#about" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Philosophy</a>
-                <a href="#contact" class="mobile-nav-link text-gold font-semibold block py-2">Contact & Inquiries</a>
+                <a href="#certifications" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Certifications</a>
+                <a href="#skills" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Technical Skills</a>
+                <a href="#projects" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Projects</a>
+                <a href="#about" class="mobile-nav-link text-stone-300 hover:text-gold block py-2">Summary</a>
+                <a href="#contact" class="mobile-nav-link text-gold font-semibold block py-2">Contact us</a>
             </div>
         </div>
     </nav>
@@ -329,70 +311,42 @@
     <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-16 relative">
         <div class="max-w-5xl mx-auto px-5 sm:px-8 flex flex-col items-center text-center z-10">
             
-            <!-- Monogram Seal & Specialty Tag -->
-            <div class="reveal mb-6 flex flex-col items-center">
-                <div class="w-16 h-16 rounded-full border border-gold/30 bg-surface flex items-center justify-center mb-5 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
-                    <span class="font-serif text-2xl font-bold text-gold tracking-widest">OK</span>
-                </div>
-                <div class="section-tag">
-                    <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
-                    Software Engineer & AI Specialist
-                </div>
-            </div>
-
-            <!-- Headline -->
-            <h1 class="reveal text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-white tracking-tight leading-[1.1] mb-6">
-                Omar Khaled <br />
-                <span class="text-gold-gradient font-normal italic">Mohamed Sobaih</span>
+            <!-- Headline: 4 words next to each other, balanced sizing -->
+            <h1 class="reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-tight mb-3">
+                Omar Khaled Mohamed Sobaih
             </h1>
 
-            <!-- Editorial Humanized Bio -->
-            <p class="reveal text-base sm:text-lg md:text-xl text-stone-400 max-w-3xl font-light leading-relaxed mb-10">
-                Designing <span class="text-stone-100 font-medium">intelligent software systems</span>, training robust <span class="text-gold font-medium">Machine Learning models</span>, and architecting scalable backend infrastructure. Driven by mathematical rigor and intentional craftsmanship.
+            <!-- Subheading: Normal text under the name, not inside a rectangle -->
+            <p class="reveal text-gold font-serif text-lg sm:text-xl md:text-2xl font-medium tracking-wide mb-6">
+                Software Engineer
             </p>
 
-            <!-- Call to Actions -->
+            <!-- Description: Full Stack development and AI/ML architectures -->
+            <p class="reveal text-base sm:text-lg text-stone-400 max-w-2xl font-light leading-relaxed mb-10">
+                Specializing in Full Stack development and AI/ML architectures. Designing intelligent systems, training robust machine learning models, and architecting scalable backend infrastructure.
+            </p>
+
+            <!-- Buttons: Explore Projects and Github -->
             <div class="reveal flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <a href="#projects" class="gold-btn px-8 py-3.5 rounded-sm text-sm uppercase tracking-wider flex items-center justify-center gap-2">
-                    <span>Explore Selected Works</span>
+                    <span>Explore Projects</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                 </a>
                 <a href="https://github.com/OmarKhaled3125" target="_blank" class="gold-outline-btn px-8 py-3.5 rounded-sm text-sm uppercase tracking-wider flex items-center justify-center gap-2.5">
                     <i class="devicon-github-original text-lg"></i>
-                    <span>GitHub Archive</span>
+                    <span>Github</span>
                 </a>
-            </div>
-
-            <!-- Subtle Stat Strip -->
-            <div class="reveal mt-16 pt-10 border-t border-gold/15 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl w-full text-center">
-                <div>
-                    <div class="font-serif text-2xl md:text-3xl font-bold text-gold">2025</div>
-                    <div class="text-[11px] font-mono text-stone-400 tracking-wider uppercase mt-1">CS & IT Graduate</div>
-                </div>
-                <div>
-                    <div class="font-serif text-2xl md:text-3xl font-bold text-gold">AI & ML</div>
-                    <div class="text-[11px] font-mono text-stone-400 tracking-wider uppercase mt-1">Core Specialization</div>
-                </div>
-                <div>
-                    <div class="font-serif text-2xl md:text-3xl font-bold text-gold">3x</div>
-                    <div class="text-[11px] font-mono text-stone-400 tracking-wider uppercase mt-1">Industry Certifications</div>
-                </div>
-                <div>
-                    <div class="font-serif text-2xl md:text-3xl font-bold text-gold">6+</div>
-                    <div class="text-[11px] font-mono text-stone-400 tracking-wider uppercase mt-1">Engineered Systems</div>
-                </div>
             </div>
 
         </div>
     </section>
 
-    <!-- 01 / Academic Foundation -->
+    <!-- Education Section -->
     <section id="education" class="py-24 relative">
         <div class="max-w-5xl mx-auto px-5 sm:px-8">
             <div class="reveal mb-12">
-                <div class="section-tag mb-3">01 / Education & Foundation</div>
                 <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
-                    Academic Background
+                    Education
                 </h2>
                 <div class="w-16 h-[2px] bg-gold mt-4"></div>
             </div>
@@ -416,23 +370,22 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-6 border-t border-gold/10 text-sm text-stone-400 font-light leading-relaxed">
-                    Coursework and specialized research encompassing Machine Learning & Neural Networks, Data Structures & Algorithmic Complexity, Distributed Systems, Database Architecture, and Computer Network Security.
+                    Coursework and specialized research encompassing Software Engineering & Design Patterns, Data Structures & Algorithmic Complexity, Distributed Systems, Database Architecture, and Computer Network Security.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 02 / Credentials & Certifications -->
+    <!-- Certifications Section -->
     <section id="certifications" class="py-24 relative bg-darker/40">
         <div class="max-w-6xl mx-auto px-5 sm:px-8">
             <div class="reveal mb-12 text-center flex flex-col items-center">
-                <div class="section-tag mb-3">02 / Verified Credentials</div>
                 <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
-                    Industry Certifications
+                    Certifications
                 </h2>
                 <div class="w-16 h-[2px] bg-gold mt-4 mb-3"></div>
                 <p class="text-stone-400 text-sm max-w-xl font-light">
-                    Rigorous credentials verifying core proficiencies across enterprise networking, routing protocols, and cloud identity governance.
+                    Verified credentials across enterprise networking, routing protocols, and cloud identity governance.
                 </p>
             </div>
 
@@ -458,7 +411,7 @@
                             Cisco Networking Academy &bull; Network architectures, IPv4/IPv6 subnetting, ethernet operations, and transport layer security.
                         </p>
                         <div class="flex items-center gap-2 text-xs font-mono text-gold group-hover:translate-x-1 transition-transform">
-                            <span>Inspect Credential</span>
+                            <span>Inspect</span>
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </div>
                     </div>
@@ -484,7 +437,7 @@
                             Cisco Networking Academy &bull; VLAN architectures, inter-VLAN routing, Spanning Tree Protocol (STP), EtherChannel, and WLAN security.
                         </p>
                         <div class="flex items-center gap-2 text-xs font-mono text-gold group-hover:translate-x-1 transition-transform">
-                            <span>Inspect Credential</span>
+                            <span>Inspect</span>
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </div>
                     </div>
@@ -510,7 +463,7 @@
                             Microsoft &bull; Cloud security compliance, Microsoft Entra ID management, Zero-Trust fundamentals, and enterprise threat protection.
                         </p>
                         <div class="flex items-center gap-2 text-xs font-mono text-gold group-hover:translate-x-1 transition-transform">
-                            <span>Inspect Credential</span>
+                            <span>Inspect</span>
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </div>
                     </div>
@@ -520,47 +473,46 @@
         </div>
     </section>
 
-    <!-- 03 / Technical Arsenal -->
+    <!-- Technical Skills Section (Ordered: Front-End, Back-end, Databases & Storage, AI/ML, Networking & Systems, Tools & Workflow) -->
     <section id="skills" class="py-24 relative">
         <div class="max-w-6xl mx-auto px-5 sm:px-8">
             <div class="reveal mb-12 text-center flex flex-col items-center">
-                <div class="section-tag mb-3">03 / Core Competencies</div>
                 <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
-                    Technical Capabilities
+                    Technical Skills
                 </h2>
                 <div class="w-16 h-[2px] bg-gold mt-4 mb-3"></div>
                 <p class="text-stone-400 text-sm max-w-xl font-light">
-                    A curated technical stack honed through hands-on system building, theoretical research, and architectural design.
+                    A comprehensive technical stack honed through hands-on system building, theoretical research, and architectural design.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- AI & ML -->
+                <!-- 1. Front-End -->
                 <div class="reveal luxury-card p-7 rounded-sm group">
                     <div class="flex items-center justify-between mb-5">
                         <div class="flex items-center gap-3 text-gold">
-                            <i class="devicon-tensorflow-original text-2xl"></i>
-                            <i class="devicon-pytorch-original text-2xl"></i>
+                            <i class="devicon-react-original text-2xl"></i>
+                            <i class="devicon-javascript-plain text-2xl"></i>
+                            <i class="devicon-tailwindcss-plain text-2xl"></i>
                         </div>
                         <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
-                            AI & Deep Learning
+                            Front-End
                         </h3>
                     </div>
                     <p class="text-xs text-stone-400 font-light mb-5">
-                        Developing neural architectures, fine-tuning language models, and designing retrieval pipelines.
+                        Crafting responsive client interfaces, interactive state systems, and clean visual layouts.
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Transformers</span>
-                        <span class="skill-tag">RAG</span>
-                        <span class="skill-tag">LoRA</span>
-                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">React.js</span>
                     </div>
                 </div>
 
-                <!-- Backend -->
+                <!-- 2. Back-end -->
                 <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 50ms;">
                     <div class="flex items-center justify-between mb-5">
                         <div class="flex items-center gap-3 text-gold">
@@ -569,11 +521,11 @@
                             <i class="devicon-flask-original text-2xl"></i>
                         </div>
                         <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
-                            Backend Engineering
+                            Back-end
                         </h3>
                     </div>
                     <p class="text-xs text-stone-400 font-light mb-5">
-                        Architecting high-throughput REST APIs, authentication security, and modular microservices.
+                        Architecting high-throughput REST APIs, authentication security, and modular services.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">Python</span>
@@ -581,36 +533,13 @@
                         <span class="skill-tag">DRF</span>
                         <span class="skill-tag">FastAPI</span>
                         <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">REST APIs</span>
                         <span class="skill-tag">JWT Auth</span>
                     </div>
                 </div>
 
-                <!-- Frontend -->
+                <!-- 3. Databases & Storage -->
                 <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 100ms;">
-                    <div class="flex items-center justify-between mb-5">
-                        <div class="flex items-center gap-3 text-gold">
-                            <i class="devicon-react-original text-2xl"></i>
-                            <i class="devicon-javascript-plain text-2xl"></i>
-                            <i class="devicon-tailwindcss-plain text-2xl"></i>
-                        </div>
-                        <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
-                            Modern Front-End
-                        </h3>
-                    </div>
-                    <p class="text-xs text-stone-400 font-light mb-5">
-                        Crafting interactive, highly responsive client interfaces with clean state management.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">JavaScript (ES6+)</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">HTML5 / Modern CSS</span>
-                        <span class="skill-tag">React Flow</span>
-                    </div>
-                </div>
-
-                <!-- Databases -->
-                <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 150ms;">
                     <div class="flex items-center justify-between mb-5">
                         <div class="flex items-center gap-3 text-gold">
                             <i class="devicon-postgresql-plain text-2xl"></i>
@@ -627,13 +556,37 @@
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">PostgreSQL</span>
                         <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">SQL</span>
                         <span class="skill-tag">SQLAlchemy</span>
                         <span class="skill-tag">ChromaDB</span>
                     </div>
                 </div>
 
-                <!-- Systems & Networking -->
+                <!-- 4. AI/ML -->
+                <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 150ms;">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center gap-3 text-gold">
+                            <i class="devicon-tensorflow-original text-2xl"></i>
+                            <i class="devicon-pytorch-original text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-base font-semibold text-white group-hover:text-gold transition-colors">
+                            AI/ML
+                        </h3>
+                    </div>
+                    <p class="text-xs text-stone-400 font-light mb-5">
+                        Developing neural architectures, fine-tuning language models, and designing retrieval pipelines.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">RAG</span>
+                        <span class="skill-tag">LoRA</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Deep Learning</span>
+                    </div>
+                </div>
+
+                <!-- 5. Networking & Systems -->
                 <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 200ms;">
                     <div class="flex items-center justify-between mb-5">
                         <div class="flex items-center gap-3 text-gold">
@@ -649,14 +602,14 @@
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">Cisco IOS</span>
-                        <span class="skill-tag">TCP/IP Protocols</span>
-                        <span class="skill-tag">VLANs & Routing</span>
                         <span class="skill-tag">Packet Tracer</span>
+                        <span class="skill-tag">TCP/IP Protocols</span>
+                        <span class="skill-tag">VLANs</span>
                         <span class="skill-tag">Azure Security</span>
                     </div>
                 </div>
 
-                <!-- Tools & Environment -->
+                <!-- 6. Tools & Workflow -->
                 <div class="reveal luxury-card p-7 rounded-sm group" style="transition-delay: 250ms;">
                     <div class="flex items-center justify-between mb-5">
                         <div class="flex items-center gap-3 text-gold">
@@ -684,23 +637,22 @@
         </div>
     </section>
 
-    <!-- 04 / Selected Works -->
+    <!-- Projects Section: Bringing all projects back -->
     <section id="projects" class="py-24 relative bg-darker/40">
         <div class="max-w-7xl mx-auto px-5 sm:px-8">
             <div class="reveal mb-12 text-center flex flex-col items-center">
-                <div class="section-tag mb-3">04 / Selected Works</div>
                 <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
-                    Featured Systems & Projects
+                    Featured Projects
                 </h2>
                 <div class="w-16 h-[2px] bg-gold mt-4 mb-3"></div>
                 <p class="text-stone-400 text-sm max-w-2xl font-light">
-                    Production systems, research implementations, and deep-learning architectures built to address complex computational challenges.
+                    Production systems, machine learning architectures, and software engineering solutions.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                 
-                <!-- LinguaZone -->
+                <!-- 1. LinguaZone -->
                 <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
@@ -710,7 +662,7 @@
                             <span class="project-badge">Full-Stack & AI</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            An intelligent language educational ecosystem combining speech processing and deep NLP. Employs Mozilla DeepSpeech for real-time speech-to-text and fine-tuned BART models for grammatical error detection and contextual correction.
+                            Full-stack edtech platform utilizing AI for personalized education. Employs Mozilla DeepSpeech for real-time speech-to-text processing and fine-tuned BART models for grammatical error detection and contextual correction.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">React.js</span>
@@ -722,7 +674,7 @@
                         <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/0158-Graduation-Project" target="_blank" class="project-link">
                                 <i class="devicon-github-original text-base"></i>
-                                <span>Code Repository</span>
+                                <span>Code</span>
                             </a>
                             <button onclick="openDocumentModal('linguazone')" class="project-link focus:outline-none">
                                 <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
@@ -732,17 +684,17 @@
                     </div>
                 </div>
 
-                <!-- Aether -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                <!-- 2. Aether -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 Aether
                             </h3>
-                            <span class="project-badge">Cognitive Twin</span>
+                            <span class="project-badge">Architecture</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            A cognitive simulation architecture designed to model and simulate individual persona memory. Integrates Retrieval-Augmented Generation (RAG) with LoRA fine-tuned language models to recall, reason, and converse with high psychological fidelity.
+                            A software system designed to preserve and simulate human consciousness, creating a "Digital Twin" that reasons and recalls memories with high fidelity using RAG and LoRA fine-tuning.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">FastAPI</span>
@@ -758,18 +710,18 @@
                             </a>
                             <button onclick="openDocumentModal('aether')" class="project-link focus:outline-none">
                                 <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                <span>Docs</span>
+                                <span>Documentation</span>
                             </button>
                             <button onclick="openModal('aether')" class="project-link focus:outline-none text-gold">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                <span>Gallery (5)</span>
+                                <span>Gallery</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Cerno -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 200ms;">
+                <!-- 3. Cerno -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
@@ -778,7 +730,7 @@
                             <span class="project-badge">DSS Platform</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            An intelligent Decision Support System (DSS) engineered to evaluate multi-variable decision pathways. Computes probabilistic outcomes, dynamic risk factors, and optimal strategic recommendations through an intuitive analytics interface.
+                            An AI-powered Decision Support System (DSS) designed to parse complex situations and project multiple decision paths with calculated success probabilities.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">FastAPI</span>
@@ -789,58 +741,58 @@
                         <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/Cerno-Decision-Support-System.git" target="_blank" class="project-link">
                                 <i class="devicon-github-original text-base"></i>
-                                <span>Code Repository</span>
+                                <span>Code</span>
                             </a>
                             <button onclick="openModal('cerno')" class="project-link focus:outline-none text-gold">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                <span>Screenshots (3)</span>
+                                <span>Gallery</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- NexusRate -->
+                <!-- 4. NexusRate -->
                 <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 NexusRate
                             </h3>
-                            <span class="project-badge">FinTech Analytics</span>
+                            <span class="project-badge">FinTech</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            High-throughput market analytics dashboard delivering real-time currency exchange rates, historical trend regression, and low-latency financial telemetry with interactive data visualization.
+                            Real-time dashboard for live market analytics, visualizing currency exchange rates and trends with interactive charts.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">React.js</span>
                             <span class="tech-tag">Django</span>
                             <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Recharts</span>
                         </div>
                         <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/NexusRate-Dashboard-for-Live-Market-Analytics.git" target="_blank" class="project-link">
                                 <i class="devicon-github-original text-base"></i>
-                                <span>Code Repository</span>
+                                <span>Code</span>
                             </a>
                             <button onclick="openModal('nexusRate')" class="project-link focus:outline-none text-gold">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                <span>Live UI Preview</span>
+                                <span>Live Preview</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Chatbot Assistant -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                <!-- 5. Chatbot Assistant -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 Chatbot Assistant
                             </h3>
-                            <span class="project-badge">Transformer LLM</span>
+                            <span class="project-badge">LLM</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            A multi-turn conversational AI system built on Hugging Face Transformers utilizing DialoGPT-medium. Implements dynamic conversational context caching and state tracking for coherent multi-stage dialogues.
+                            A conversational AI utilizing Hugging Face Transformers (DialoGPT-medium). Handles multi-turn conversations with context memory.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">Transformers</span>
@@ -851,43 +803,292 @@
                         <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/Chatbot_Assistant" target="_blank" class="project-link">
                                 <i class="devicon-github-original text-base"></i>
-                                <span>Code Repository</span>
+                                <span>Code</span>
                             </a>
                             <button onclick="openModal('chatbotAssistant')" class="project-link focus:outline-none text-gold">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                <span>Interface View</span>
+                                <span>Live Preview</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sentry -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 200ms;">
+                <!-- 6. Sentry -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 Sentry
                             </h3>
-                            <span class="project-badge">Execution Forensics</span>
+                            <span class="project-badge">Forensics</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            A forensic analysis and telemetry tool designed for distributed pipeline debugging. Enables engineers to visually inspect execution traces, identify failure propagation bottlenecks, and diagnose anomalous state transitions.
+                            A trace failure forensics & pipeline architecture tool helping engineers inspect and debug execution traces visually.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">React Flow</span>
                             <span class="tech-tag">SQLite</span>
-                            <span class="tech-tag">Trace Analysis</span>
+                            <span class="tech-tag">Systems Forensics</span>
                         </div>
                         <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
                             <a href="https://github.com/OmarKhaled3125/Sentry" target="_blank" class="project-link">
                                 <i class="devicon-github-original text-base"></i>
-                                <span>Code Repository</span>
+                                <span>Code</span>
                             </a>
                             <button onclick="openModal('sentry')" class="project-link focus:outline-none text-gold">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                <span>Trace Gallery (5)</span>
+                                <span>Gallery</span>
                             </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Task Manager -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Task Manager
+                            </h3>
+                            <span class="project-badge">REST API</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            Developed a high-performance REST API with full CRUD operations, JWT-based authentication, and an optimized normalized MySQL database schema for efficient data storage and retrieval.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JWT Auth</span>
+                            <span class="tech-tag">REST APIs</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125/Task-Manager.git" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <button onclick="openModal('taskManager')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <span>Gallery</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. E-commerce Shop -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                E-commerce Shop
+                            </h3>
+                            <span class="project-badge">E-Commerce</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            A modern e-commerce storefront featuring responsive product catalog browsing, real-time cart state management, and an interactive checkout modal built with React.js and Tailwind CSS.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">State Management</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125/E-commerce-shop.git" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://github.com/OmarKhaled3125/E-commerce-shop#readme" target="_blank" class="project-link focus:outline-none">
+                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                <span>Documentation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Weather Monitor -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Weather Monitor
+                            </h3>
+                            <span class="project-badge">IoT & Systems</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            Real-time environmental weather monitoring and telemetry analysis platform engineered to collect, process, and visualize atmospheric sensor data streams with automated event alerting.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">Software Engineering</span>
+                            <span class="tech-tag">Sensor Telemetry</span>
+                            <span class="tech-tag">Data Analytics</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="Presentations/Selected Labs in Software Engineering - Weather Monitoring System Project.pptx" download class="project-link focus:outline-none">
+                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                <span>Documentation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. OS CPU Scheduler -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                OS CPU Scheduler
+                            </h3>
+                            <span class="project-badge">Systems Architecture</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            An operating systems simulation framework modeling core CPU scheduling algorithms including FCFS, SJF, Round Robin, and Priority Scheduling with process turnaround metrics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">Operating Systems</span>
+                            <span class="tech-tag">C / C++</span>
+                            <span class="tech-tag">Process Scheduling</span>
+                            <span class="tech-tag">Simulation</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="Presentations/Operating Systems Project Presentation 2023-2024.pptx" download class="project-link focus:outline-none">
+                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                <span>Documentation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Sentiment Analyzer -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Sentiment Analyzer
+                            </h3>
+                            <span class="project-badge">Deep Learning</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            Deep learning NLP sentiment classification system analyzing real-time textual streams with fine-tuned sentiment polarity scoring and interactive visualization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Classification</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <button onclick="openModal('sentimentAnalyzer')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <span>Live Preview</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Smart IoT Lighting -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Smart IoT Lighting
+                            </h3>
+                            <span class="project-badge">Embedded IoT</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            An automated intelligent lighting control ecosystem utilizing microcontrollers, sensor telemetry, and responsive wireless protocols for adaptive environmental illumination.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Embedded C++</span>
+                            <span class="tech-tag">Sensors</span>
+                            <span class="tech-tag">Telemetry</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <button onclick="openModal('smartIot')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <span>Live Preview</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Brain Tumor Classification -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Brain Tumor Classification
+                            </h3>
+                            <span class="project-badge">Medical AI</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            Deep learning convolutional neural network (CNN) model engineered to detect and classify brain tumors from MRI diagnostic imaging with high precision.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Medical Imaging</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="Presentations/Machine Learning project 2025 - Brain Tumor Classification.pptx" download class="project-link focus:outline-none">
+                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                <span>Documentation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. SaaS Features Grid -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                SaaS Features Grid
+                            </h3>
+                            <span class="project-badge">Frontend UI</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            A sleek, high-conversion SaaS feature showcase grid built with Tailwind CSS and modular responsive UI engineering for modern web applications.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive UI</span>
+                            <span class="tech-tag">HTML5</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125/SaaS-Features-Grid.git" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://github.com/OmarKhaled3125/SaaS-Features-Grid#readme" target="_blank" class="project-link focus:outline-none">
+                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                <span>Documentation</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -896,13 +1097,12 @@
         </div>
     </section>
 
-    <!-- 05 / Engineering Philosophy & Profile -->
+    <!-- Professional Summary Section -->
     <section id="about" class="py-24 relative">
         <div class="max-w-4xl mx-auto px-5 sm:px-8">
             <div class="reveal mb-12">
-                <div class="section-tag mb-3">05 / Perspective & Philosophy</div>
                 <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white tracking-tight">
-                    Engineering Profile
+                    Professional Summary
                 </h2>
                 <div class="w-16 h-[2px] bg-gold mt-4"></div>
             </div>
@@ -910,46 +1110,23 @@
             <div class="reveal luxury-card rounded-sm p-8 sm:p-12 border-l-2 border-l-gold">
                 <div class="space-y-6 text-base sm:text-lg leading-relaxed text-stone-300 font-light">
                     <p>
-                        I approach software engineering as the intersection of rigorous mathematical thinking and deliberate system craftsmanship. Graduating in 2025 with a Bachelor of Science in Computer Science & IT, my focus has been centered on building intelligent systems where artificial intelligence operates harmoniously alongside robust backend architecture.
+                        I approach software engineering as the intersection of rigorous mathematical thinking and deliberate system craftsmanship. Graduating in 2025 with a Bachelor of Science in Computer Science & IT, my focus has been centered on building intelligent systems where artificial intelligence operates harmoniously alongside robust full-stack architectures.
                     </p>
                     <p>
-                        Rather than treating modern machine learning as a black box, I prioritize understanding the core mechanics — from transformer attention weights and retrieval indexing to distributed consensus and relational query optimization.
+                        Rather than treating modern machine learning as a black box, I prioritize understanding the core mechanics, from transformer attention weights and retrieval indexing to distributed consensus and relational query optimization.
                     </p>
-                </div>
-
-                <!-- Engineering Principles Grid -->
-                <div class="mt-10 pt-8 border-t border-gold/15 grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="p-4 bg-dark/60 rounded-sm border border-gold/10">
-                        <div class="font-serif text-sm font-semibold text-gold mb-1">01 &bull; Architectural Clarity</div>
-                        <p class="text-xs text-stone-400 font-light leading-relaxed">
-                            Decoupled services, strict type boundaries, and self-documenting code over clever hacks.
-                        </p>
-                    </div>
-                    <div class="p-4 bg-dark/60 rounded-sm border border-gold/10">
-                        <div class="font-serif text-sm font-semibold text-gold mb-1">02 &bull; Algorithmic Depth</div>
-                        <p class="text-xs text-stone-400 font-light leading-relaxed">
-                            Thorough comprehension of loss surfaces, model limits, and data distribution drift.
-                        </p>
-                    </div>
-                    <div class="p-4 bg-dark/60 rounded-sm border border-gold/10">
-                        <div class="font-serif text-sm font-semibold text-gold mb-1">03 &bull; Production Reliability</div>
-                        <p class="text-xs text-stone-400 font-light leading-relaxed">
-                            Defensive validation, structured telemetry, graceful fallbacks, and deterministic states.
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 06 / Contact & Footer -->
+    <!-- Contact Section -->
     <footer id="contact" class="bg-darker border-t border-gold/20 pt-24 pb-14">
         <div class="max-w-6xl mx-auto px-5 sm:px-8 text-center">
             
             <div class="reveal mb-14 flex flex-col items-center">
-                <div class="section-tag mb-3">06 / Connect & Inquiries</div>
                 <h2 class="font-serif text-3xl sm:text-5xl font-semibold text-white tracking-tight mb-4">
-                    Initiate a Conversation
+                    Contact us
                 </h2>
                 <div class="w-16 h-[2px] bg-gold mb-6"></div>
                 <p class="text-stone-400 text-sm sm:text-base max-w-xl font-light leading-relaxed">
@@ -1150,6 +1327,31 @@
                     "Screenshots/Sentry/5.png"
                 ],
                 download: "Screenshots/Sentry/1.png"
+            },
+            taskManager: {
+                title: "Task Manager — Application Interface & Signup",
+                type: "image",
+                items: [
+                    "Screenshots/Task Manager/Dashboard.png",
+                    "Screenshots/Task Manager/Signup.png"
+                ],
+                download: "Screenshots/Task Manager/Dashboard.png"
+            },
+            sentimentAnalyzer: {
+                title: "Sentiment Analyzer — System Demo",
+                type: "video",
+                items: [
+                    "Demos/Sentiment Analyzer/Demo.mp4"
+                ],
+                download: "Demos/Sentiment Analyzer/Demo.mp4"
+            },
+            smartIot: {
+                title: "Smart IoT Lighting — Hardware & Control Demo",
+                type: "video",
+                items: [
+                    "Demos/Smart IoT Lightning/Demo.mp4"
+                ],
+                download: "Demos/Smart IoT Lightning/Demo.mp4"
             }
         };
 
@@ -1274,7 +1476,7 @@
             }
         });
 
-        // Mobile Menu Toggle with Smooth Drawer Animation
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
