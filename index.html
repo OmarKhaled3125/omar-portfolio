@@ -244,31 +244,27 @@
 </head>
 <body class="text-stone-300 antialiased overflow-x-hidden relative font-sans selection:bg-gold/30 selection:text-gold-light">
 
-    <!-- Floating Luxury Resume Download Action -->
+    <!-- Floating Luxury Resume Download Action (Without glowing dot) -->
     <a href="resume.pdf" download="Omar_Khaled_Resume" 
        class="fixed bottom-7 right-7 z-[60] flex items-center gap-3 px-5 py-3 rounded-full bg-darker/90 backdrop-blur-md text-stone-200 font-medium text-sm border border-gold/40 shadow-2xl hover:border-gold hover:text-white hover:shadow-[0_0_25px_rgba(212,175,55,0.3)] transition-all duration-300 group">
-        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
         <svg class="w-4 h-4 text-gold group-hover:translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
         </svg>
         <span class="tracking-wide">Resume (PDF)</span>
     </a>
 
-    <!-- Navigation Header -->
+    <!-- Navigation Header: Clean Top-Left with Name and Title Only -->
     <nav class="fixed w-full z-50 glass-nav" id="navbar">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <div class="flex items-center justify-between h-20">
-                <!-- Top-Left Brand Logo matching favicon -->
-                <a href="#home" class="flex items-center gap-3.5 group">
-                    <img src="favicon/favicon.svg" alt="Omar Khaled" class="w-8 h-8 rounded-sm object-contain border border-gold/30 p-0.5 group-hover:border-gold transition-colors">
-                    <div class="flex flex-col">
-                        <span class="font-serif font-bold text-base tracking-widest text-stone-100 group-hover:text-gold transition-colors">
-                            OMAR KHALED
-                        </span>
-                        <span class="text-[9px] font-mono tracking-[0.25em] text-stone-400 uppercase">
-                            Software Engineer
-                        </span>
-                    </div>
+                <!-- Top-Left: Name & Title Only (No Icon) -->
+                <a href="#home" class="flex flex-col group">
+                    <span class="font-serif font-bold text-base tracking-widest text-stone-100 group-hover:text-gold transition-colors">
+                        OMAR KHALED
+                    </span>
+                    <span class="text-[9px] font-mono tracking-[0.25em] text-stone-400 uppercase">
+                        Software Engineer
+                    </span>
                 </a>
 
                 <!-- Desktop Nav Links -->
@@ -309,21 +305,21 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-16 relative">
-        <div class="max-w-5xl mx-auto px-5 sm:px-8 flex flex-col items-center text-center z-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col items-center text-center z-10 w-full">
             
-            <!-- Headline: 4 words next to each other, balanced sizing -->
-            <h1 class="reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-tight mb-3">
+            <!-- Headline: Single-Line Full Name with whitespace-nowrap and balanced fluid sizing -->
+            <h1 class="reveal font-serif font-bold text-white tracking-tight leading-tight mb-3 whitespace-nowrap text-[1.65rem] xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-full overflow-visible">
                 Omar Khaled Mohamed Sobaih
             </h1>
 
-            <!-- Subheading: Normal text under the name, not inside a rectangle -->
+            <!-- Subheading: Normal text under the name -->
             <p class="reveal text-gold font-serif text-lg sm:text-xl md:text-2xl font-medium tracking-wide mb-6">
                 Software Engineer
             </p>
 
-            <!-- Description: Full Stack development and AI/ML architectures -->
+            <!-- Exact User Requested Description -->
             <p class="reveal text-base sm:text-lg text-stone-400 max-w-2xl font-light leading-relaxed mb-10">
-                Specializing in Full Stack development and AI/ML architectures. Designing intelligent systems, training robust machine learning models, and architecting scalable backend infrastructure.
+                Specializing in Full Stack development and AI/ML architectures. Designing intelligent systems, architecting scalable infrastructures. and training robust models.
             </p>
 
             <!-- Buttons: Explore Projects and Github -->
@@ -637,7 +633,7 @@
         </div>
     </section>
 
-    <!-- Projects Section: Bringing all projects back -->
+    <!-- Projects Section: Exact Ordering and Designated Badges -->
     <section id="projects" class="py-24 relative bg-darker/40">
         <div class="max-w-7xl mx-auto px-5 sm:px-8">
             <div class="reveal mb-12 text-center flex flex-col items-center">
@@ -652,7 +648,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                 
-                <!-- 1. LinguaZone -->
+                <!-- 1. LinguaZone (Full-Stack & AI) -->
                 <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
@@ -684,14 +680,14 @@
                     </div>
                 </div>
 
-                <!-- 2. Aether -->
+                <!-- 2. Aether (Full-Stack & AI) -->
                 <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 Aether
                             </h3>
-                            <span class="project-badge">Architecture</span>
+                            <span class="project-badge">Full-Stack & AI</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
                             A software system designed to preserve and simulate human consciousness, creating a "Digital Twin" that reasons and recalls memories with high fidelity using RAG and LoRA fine-tuning.
@@ -720,14 +716,14 @@
                     </div>
                 </div>
 
-                <!-- 3. Cerno -->
+                <!-- 3. Cerno (Full Stack & AI) -->
                 <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 Cerno
                             </h3>
-                            <span class="project-badge">DSS Platform</span>
+                            <span class="project-badge">Full Stack & AI</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
                             An AI-powered Decision Support System (DSS) designed to parse complex situations and project multiple decision paths with calculated success probabilities.
@@ -751,14 +747,14 @@
                     </div>
                 </div>
 
-                <!-- 4. NexusRate -->
+                <!-- 4. NexusRate (Full Stack) -->
                 <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 NexusRate
                             </h3>
-                            <span class="project-badge">FinTech</span>
+                            <span class="project-badge">Full Stack</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
                             Real-time dashboard for live market analytics, visualizing currency exchange rates and trends with interactive charts.
@@ -782,45 +778,14 @@
                     </div>
                 </div>
 
-                <!-- 5. Chatbot Assistant -->
+                <!-- 5. Sentry (Full Stack) -->
                 <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex justify-between items-start mb-5">
-                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
-                                Chatbot Assistant
-                            </h3>
-                            <span class="project-badge">LLM</span>
-                        </div>
-                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            A conversational AI utilizing Hugging Face Transformers (DialoGPT-medium). Handles multi-turn conversations with context memory.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                            <span class="tech-tag">Transformers</span>
-                            <span class="tech-tag">DialoGPT</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">Python NLP</span>
-                        </div>
-                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
-                            <a href="https://github.com/OmarKhaled3125/Chatbot_Assistant" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-base"></i>
-                                <span>Code</span>
-                            </a>
-                            <button onclick="openModal('chatbotAssistant')" class="project-link focus:outline-none text-gold">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                <span>Live Preview</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6. Sentry -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 Sentry
                             </h3>
-                            <span class="project-badge">Forensics</span>
+                            <span class="project-badge">Full Stack</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
                             A trace failure forensics & pipeline architecture tool helping engineers inspect and debug execution traces visually.
@@ -844,17 +809,173 @@
                     </div>
                 </div>
 
-                <!-- 7. Task Manager -->
+                <!-- 6. Chatbot Assistant (AI/ML) -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Chatbot Assistant
+                            </h3>
+                            <span class="project-badge">AI/ML</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            A conversational AI utilizing Hugging Face Transformers (DialoGPT-medium). Handles multi-turn conversations with context memory.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">DialoGPT</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Python NLP</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125/Chatbot_Assistant" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <button onclick="openModal('chatbotAssistant')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <span>Live Preview</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Sentiment Analyzer (AI/ML) -->
                 <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Sentiment Analyzer
+                            </h3>
+                            <span class="project-badge">AI/ML</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            Deep learning NLP sentiment classification system analyzing real-time textual streams with fine-tuned sentiment polarity scoring and interactive visualization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Classification</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <button onclick="openModal('sentimentAnalyzer')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Video Demo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Brain Tumor Classification (AI/ML) -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Brain Tumor Classification
+                            </h3>
+                            <span class="project-badge">AI/ML</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            Deep learning convolutional neural network (CNN) model engineered to detect and classify brain tumors from MRI diagnostic imaging with high precision.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Medical Imaging</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="Presentations/Machine Learning project 2025 - Brain Tumor Classification.pptx" download class="project-link focus:outline-none">
+                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                <span>Presentation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. SaaS Features Grid (Front-End) -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                SaaS Features Grid
+                            </h3>
+                            <span class="project-badge">Front-End</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            A sleek, high-conversion SaaS feature showcase grid built with Tailwind CSS and modular responsive UI engineering for modern web applications.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive UI</span>
+                            <span class="tech-tag">HTML5</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125/SaaS-Features-Grid.git" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://omarkhaled3125.github.io/SaaS-Features-Grid/" target="_blank" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. E-commerce Shop (Front-End) -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                E-commerce Shop
+                            </h3>
+                            <span class="project-badge">Front-End</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            A modern e-commerce storefront featuring responsive product catalog browsing, real-time cart state management, and an interactive checkout modal built with React.js and Tailwind CSS.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">State Management</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125/E-commerce-shop.git" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="https://e-commerce-shop-tau-virid.vercel.app/" target="_blank" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Task Manager (Desktop) -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 Task Manager
                             </h3>
-                            <span class="project-badge">REST API</span>
+                            <span class="project-badge">Desktop</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            Developed a high-performance REST API with full CRUD operations, JWT-based authentication, and an optimized normalized MySQL database schema for efficient data storage and retrieval.
+                            Developed a high-performance application with full CRUD operations, JWT-based authentication, and an optimized normalized MySQL database schema for efficient data storage and retrieval.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                             <span class="tech-tag">Python</span>
@@ -875,46 +996,14 @@
                     </div>
                 </div>
 
-                <!-- 8. E-commerce Shop -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex justify-between items-start mb-5">
-                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
-                                E-commerce Shop
-                            </h3>
-                            <span class="project-badge">E-Commerce</span>
-                        </div>
-                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            A modern e-commerce storefront featuring responsive product catalog browsing, real-time cart state management, and an interactive checkout modal built with React.js and Tailwind CSS.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                            <span class="tech-tag">React.js</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">State Management</span>
-                        </div>
-                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
-                            <a href="https://github.com/OmarKhaled3125/E-commerce-shop.git" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-base"></i>
-                                <span>Code</span>
-                            </a>
-                            <a href="https://github.com/OmarKhaled3125/E-commerce-shop#readme" target="_blank" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                <span>Documentation</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9. Weather Monitor -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
+                <!-- 12. Weather Monitor (Desktop) -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 Weather Monitor
                             </h3>
-                            <span class="project-badge">IoT & Systems</span>
+                            <span class="project-badge">Desktop</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
                             Real-time environmental weather monitoring and telemetry analysis platform engineered to collect, process, and visualize atmospheric sensor data streams with automated event alerting.
@@ -932,20 +1021,51 @@
                             </a>
                             <a href="Presentations/Selected Labs in Software Engineering - Weather Monitoring System Project.pptx" download class="project-link focus:outline-none">
                                 <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                <span>Documentation</span>
+                                <span>Presentation</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 10. OS CPU Scheduler -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
+                <!-- 13. Smart IoT Lighting (Embedded Systems) -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-5">
+                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                                Smart IoT Lighting
+                            </h3>
+                            <span class="project-badge">Embedded Systems</span>
+                        </div>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
+                            An automated intelligent lighting control ecosystem utilizing microcontrollers, sensor telemetry, and responsive wireless protocols for adaptive environmental illumination.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Embedded C++</span>
+                            <span class="tech-tag">Sensors</span>
+                            <span class="tech-tag">Telemetry</span>
+                        </div>
+                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
+                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
+                                <i class="devicon-github-original text-base"></i>
+                                <span>Code</span>
+                            </a>
+                            <button onclick="openModal('smartIot')" class="project-link focus:outline-none text-gold">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Video Demo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. OS CPU Scheduler (Desktop) -->
+                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
                     <div class="p-8 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-5">
                             <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
                                 OS CPU Scheduler
                             </h3>
-                            <span class="project-badge">Systems Architecture</span>
+                            <span class="project-badge">Desktop</span>
                         </div>
                         <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
                             An operating systems simulation framework modeling core CPU scheduling algorithms including FCFS, SJF, Round Robin, and Priority Scheduling with process turnaround metrics.
@@ -963,131 +1083,7 @@
                             </a>
                             <a href="Presentations/Operating Systems Project Presentation 2023-2024.pptx" download class="project-link focus:outline-none">
                                 <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                <span>Documentation</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 11. Sentiment Analyzer -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex justify-between items-start mb-5">
-                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
-                                Sentiment Analyzer
-                            </h3>
-                            <span class="project-badge">Deep Learning</span>
-                        </div>
-                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            Deep learning NLP sentiment classification system analyzing real-time textual streams with fine-tuned sentiment polarity scoring and interactive visualization.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Deep Learning</span>
-                            <span class="tech-tag">Classification</span>
-                        </div>
-                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
-                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-base"></i>
-                                <span>Code</span>
-                            </a>
-                            <button onclick="openModal('sentimentAnalyzer')" class="project-link focus:outline-none text-gold">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                <span>Live Preview</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9. Smart IoT Lighting -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 100ms;">
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex justify-between items-start mb-5">
-                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
-                                Smart IoT Lighting
-                            </h3>
-                            <span class="project-badge">Embedded IoT</span>
-                        </div>
-                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            An automated intelligent lighting control ecosystem utilizing microcontrollers, sensor telemetry, and responsive wireless protocols for adaptive environmental illumination.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                            <span class="tech-tag">IoT</span>
-                            <span class="tech-tag">Embedded C++</span>
-                            <span class="tech-tag">Sensors</span>
-                            <span class="tech-tag">Telemetry</span>
-                        </div>
-                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
-                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-base"></i>
-                                <span>Code</span>
-                            </a>
-                            <button onclick="openModal('smartIot')" class="project-link focus:outline-none text-gold">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                <span>Live Preview</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 10. Brain Tumor Classification -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col">
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex justify-between items-start mb-5">
-                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
-                                Brain Tumor Classification
-                            </h3>
-                            <span class="project-badge">Medical AI</span>
-                        </div>
-                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            Deep learning convolutional neural network (CNN) model engineered to detect and classify brain tumors from MRI diagnostic imaging with high precision.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">CNN</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Medical Imaging</span>
-                        </div>
-                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
-                            <a href="https://github.com/OmarKhaled3125" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-base"></i>
-                                <span>Code</span>
-                            </a>
-                            <a href="Presentations/Machine Learning project 2025 - Brain Tumor Classification.pptx" download class="project-link focus:outline-none">
-                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                <span>Documentation</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 11. SaaS Features Grid -->
-                <div class="reveal luxury-card rounded-sm overflow-hidden group flex flex-col" style="transition-delay: 50ms;">
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="flex justify-between items-start mb-5">
-                            <h3 class="font-serif text-xl font-semibold text-white group-hover:text-gold transition-colors">
-                                SaaS Features Grid
-                            </h3>
-                            <span class="project-badge">Frontend UI</span>
-                        </div>
-                        <p class="text-stone-400 text-sm mb-6 leading-relaxed font-light">
-                            A sleek, high-conversion SaaS feature showcase grid built with Tailwind CSS and modular responsive UI engineering for modern web applications.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                            <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive UI</span>
-                            <span class="tech-tag">HTML5</span>
-                        </div>
-                        <div class="flex items-center gap-6 pt-5 border-t border-gold/15">
-                            <a href="https://github.com/OmarKhaled3125/SaaS-Features-Grid.git" target="_blank" class="project-link">
-                                <i class="devicon-github-original text-base"></i>
-                                <span>Code</span>
-                            </a>
-                            <a href="https://github.com/OmarKhaled3125/SaaS-Features-Grid#readme" target="_blank" class="project-link focus:outline-none">
-                                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                                <span>Documentation</span>
+                                <span>Presentation</span>
                             </a>
                         </div>
                     </div>
@@ -1308,14 +1304,6 @@
                 ],
                 download: "Screenshots/NexusRate/NexusRate.png"
             },
-            chatbotAssistant: {
-                title: "Chatbot Assistant — Conversational Agent Dialogue",
-                type: "image",
-                items: [
-                    "Screenshots/Chatbot Assistant/Chat.png"
-                ],
-                download: "Screenshots/Chatbot Assistant/Chat.png"
-            },
             sentry: {
                 title: "Sentry — Trace Failure Forensics Visualization",
                 type: "image",
@@ -1328,14 +1316,13 @@
                 ],
                 download: "Screenshots/Sentry/1.png"
             },
-            taskManager: {
-                title: "Task Manager — Application Interface & Signup",
+            chatbotAssistant: {
+                title: "Chatbot Assistant — Conversational Agent Dialogue",
                 type: "image",
                 items: [
-                    "Screenshots/Task Manager/Dashboard.png",
-                    "Screenshots/Task Manager/Signup.png"
+                    "Screenshots/Chatbot Assistant/Chat.png"
                 ],
-                download: "Screenshots/Task Manager/Dashboard.png"
+                download: "Screenshots/Chatbot Assistant/Chat.png"
             },
             sentimentAnalyzer: {
                 title: "Sentiment Analyzer — System Demo",
@@ -1344,6 +1331,15 @@
                     "Demos/Sentiment Analyzer/Demo.mp4"
                 ],
                 download: "Demos/Sentiment Analyzer/Demo.mp4"
+            },
+            taskManager: {
+                title: "Task Manager — Application Interface & Signup",
+                type: "image",
+                items: [
+                    "Screenshots/Task Manager/Dashboard.png",
+                    "Screenshots/Task Manager/Signup.png"
+                ],
+                download: "Screenshots/Task Manager/Dashboard.png"
             },
             smartIot: {
                 title: "Smart IoT Lighting — Hardware & Control Demo",
